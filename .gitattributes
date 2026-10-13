@@ -1,0 +1,8 @@
+# 자막은 CRLF 그대로 보존 (줄바꿈 변환 금지)
+*.sbv -text
+# 바이너리 에셋
+*.mov binary
+*.webm binary
+*.png binary
+*.jpg binary
+*.pdf binary
