@@ -2,13 +2,13 @@
  "meta": {"title": "한국어 레벨별 어휘 목록 (A1–B2)", "total_words": 3237, "counts": {"A1": {"명사": 232, "동사": 91, "형용사": 54, "부사": 45, "합계": 422}, "A2": {"명사": 411, "동사": 192, "형용사": 89, "부사": 59, "합계": 751}, "B1": {"명사": 607, "동사": 289, "형용사": 116, "부사": 90, "합계": 1102}, "B2": {"명사": 443, "동사": 258, "형용사": 151, "부사": 110, "합계": 962}}, "structure": "levels → 레벨(A1~B2) → 품사(명사/동사/형용사/부사) → 미사용/사용 → 단어 목록", "fields": {"id": "레벨-품사코드-순번 (고유값, 변경하지 않음)", "word": "단어 (동사·형용사는 기본형)", "meaning": "영어 뜻", "rank": "레벨·품사 안의 빈도 순위 (1이 가장 높음)", "used_in": "이 단어가 쓰인 세션 ID 목록"}, "rules": ["세션을 만들면 사용한 단어를 '미사용'에서 '사용'으로 옮기고 used_in에 세션 ID를 추가한다.", "이미 '사용'에 있는 단어를 다른 세션에서 다시 쓰면 위치는 그대로 두고 used_in에 세션 ID만 추가한다.", "각 목록은 rank 순으로 정렬해 둔다.", "세션 기록은 sessions 배열에 남긴다."], "session_format": {"id": "S001", "level": "A1", "situation": "예: 마트에서", "new_words": ["새로 쓴 단어 id"], "review_words": ["다시 쓴 단어 id"]}},
  "sessions": [
   {"id": "S001", "level": "A1-A2", "situation": "동네 마트에서", "new_words": ["A1-N-068", "A1-N-097", "A2-N-085", "A1-N-099", "A2-N-087", "A1-N-102", "A1-N-105", "A2-N-195", "A2-N-098", "A1-V-015", "A2-V-013", "A2-V-090", "A2-V-051", "A2-V-026", "A1-V-031", "A1-ADJ-014", "A1-ADJ-015", "A2-ADJ-033", "A1-ADJ-008", "A2-ADJ-027", "A1-ADV-010"], "review_words": []},
-  {"id": "S002", "level": "A1-A2", "situation": "우리 집 부엌에서", "new_words": ["A1-N-004", "A2-N-070", "A1-ADJ-031", "A1-N-015", "A1-V-009", "A1-V-048", "A2-N-075", "A1-V-039", "A2-V-042", "A2-N-235", "A2-N-233", "A2-ADJ-007", "A1-V-040", "A1-N-100", "A2-N-080", "A2-V-041", "B1-N-334", "A1-N-080", "B1-N-333", "B1-N-110", "A2-V-003", "A2-V-100", "A1-ADV-031", "A2-V-040", "A2-N-259", "A1-N-078", "A2-V-057", "A2-V-043", "A2-N-277", "A1-N-218", "A2-V-095", "A1-ADV-011", "A2-V-094", "B1-N-114", "A1-ADJ-001", "A2-N-088", "A2-N-252", "A2-V-101", "A2-ADJ-030", "A2-ADV-001", "A1-ADJ-018", "A2-V-165", "A2-N-083", "A1-N-010", "A2-V-108", "A1-V-010", "A2-ADJ-011", "A1-N-228"], "review_words": ["A2-N-087", "A2-V-090", "A1-ADV-010", "A1-ADJ-008", "A2-ADJ-027"]}
+  {"id": "S002", "level": "A1-A2", "situation": "우리 집 부엌에서", "new_words": ["A1-N-004", "A2-N-070", "A1-ADJ-031", "A1-N-015", "A1-V-009", "A1-V-048", "A2-N-075", "A1-V-039", "A2-V-042", "A2-N-235", "A2-N-233", "A2-ADJ-007", "A1-V-040", "A1-N-100", "A2-N-080", "A2-V-041", "B1-N-334", "A1-N-080", "B1-N-333", "B1-N-110", "A2-V-003", "A2-V-100", "A1-ADV-031", "A2-V-040", "A2-N-259", "A1-N-078", "A2-V-057", "A2-V-043", "A2-N-277", "A1-N-218", "A2-V-095", "A1-ADV-011", "A2-V-094", "B1-N-114", "A1-ADJ-001", "A2-N-088", "A2-N-252", "A2-V-101", "A2-ADJ-030", "A2-ADV-001", "A1-ADJ-018", "A2-V-165", "A2-N-083", "A1-N-010", "A2-V-108", "A1-V-010", "A2-ADJ-011", "A1-N-228"], "review_words": ["A2-N-087", "A2-V-090", "A1-ADV-010", "A1-ADJ-008", "A2-ADJ-027"]},
+  {"id": "S003", "level": "A1-A2", "situation": "산에서", "new_words": ["A1-N-011", "A1-N-086", "A2-N-054", "A2-N-053", "B1-N-383", "A1-N-191", "A2-N-270", "A2-N-066", "A1-N-101", "A1-N-047", "B1-N-331", "A1-N-074", "A1-N-082", "A1-N-089", "A2-N-112", "B1-N-384", "B1-N-599", "A1-N-059", "A1-N-001", "B1-N-164", "A1-N-117", "A2-N-359", "A1-N-190", "A1-N-230", "A1-N-107", "A1-N-088", "A1-V-007", "B1-V-250", "A1-V-047", "A1-V-006", "A1-V-043", "A1-V-065", "A1-V-072", "A2-V-078", "A1-V-057", "B1-V-287", "A2-V-089", "A2-V-025", "B1-V-063", "A1-V-066", "B1-V-249", "A1-V-020", "A2-V-085", "A2-ADJ-014", "A2-ADJ-040", "A1-ADJ-037", "A1-ADJ-026", "A2-ADJ-039", "A2-ADJ-022", "A2-ADV-011", "A1-ADV-003", "A1-ADV-001", "A1-ADV-037", "A2-ADV-032", "A1-ADV-033"], "review_words": []}
  ],
  "levels": {
   "A1": {
    "명사": {
     "미사용": [
-     {"id": "A1-N-001", "word": "사람", "meaning": "person", "rank": 1, "used_in": []},
      {"id": "A1-N-002", "word": "것", "meaning": "thing", "rank": 2, "used_in": []},
      {"id": "A1-N-003", "word": "때", "meaning": "time/when", "rank": 3, "used_in": []},
      {"id": "A1-N-005", "word": "친구", "meaning": "friend", "rank": 5, "used_in": []},
@@ -16,7 +16,6 @@
      {"id": "A1-N-007", "word": "나라", "meaning": "country", "rank": 7, "used_in": []},
      {"id": "A1-N-008", "word": "시간", "meaning": "time/hour", "rank": 8, "used_in": []},
      {"id": "A1-N-009", "word": "학교", "meaning": "school", "rank": 9, "used_in": []},
-     {"id": "A1-N-011", "word": "오늘", "meaning": "today", "rank": 11, "used_in": []},
      {"id": "A1-N-012", "word": "내일", "meaning": "tomorrow", "rank": 12, "used_in": []},
      {"id": "A1-N-013", "word": "어제", "meaning": "yesterday", "rank": 13, "used_in": []},
      {"id": "A1-N-014", "word": "돈", "meaning": "money", "rank": 14, "used_in": []},
@@ -51,7 +50,6 @@
      {"id": "A1-N-044", "word": "책", "meaning": "book", "rank": 44, "used_in": []},
      {"id": "A1-N-045", "word": "책상", "meaning": "desk", "rank": 45, "used_in": []},
      {"id": "A1-N-046", "word": "의자", "meaning": "chair", "rank": 46, "used_in": []},
-     {"id": "A1-N-047", "word": "가방", "meaning": "bag", "rank": 47, "used_in": []},
      {"id": "A1-N-048", "word": "옷", "meaning": "clothes", "rank": 48, "used_in": []},
      {"id": "A1-N-049", "word": "신발", "meaning": "shoes", "rank": 49, "used_in": []},
      {"id": "A1-N-050", "word": "전화", "meaning": "telephone", "rank": 50, "used_in": []},
@@ -63,7 +61,6 @@
      {"id": "A1-N-056", "word": "노래", "meaning": "song", "rank": 56, "used_in": []},
      {"id": "A1-N-057", "word": "운동", "meaning": "exercise", "rank": 57, "used_in": []},
      {"id": "A1-N-058", "word": "공부", "meaning": "study", "rank": 58, "used_in": []},
-     {"id": "A1-N-059", "word": "한국", "meaning": "Korea", "rank": 59, "used_in": []},
      {"id": "A1-N-060", "word": "한국어", "meaning": "Korean language", "rank": 60, "used_in": []},
      {"id": "A1-N-061", "word": "영어", "meaning": "English", "rank": 61, "used_in": []},
      {"id": "A1-N-062", "word": "병원", "meaning": "hospital", "rank": 62, "used_in": []},
@@ -77,20 +74,15 @@
      {"id": "A1-N-071", "word": "지하철", "meaning": "subway", "rank": 71, "used_in": []},
      {"id": "A1-N-072", "word": "택시", "meaning": "taxi", "rank": 72, "used_in": []},
      {"id": "A1-N-073", "word": "차", "meaning": "car/tea", "rank": 73, "used_in": []},
-     {"id": "A1-N-074", "word": "길", "meaning": "road/way", "rank": 74, "used_in": []},
      {"id": "A1-N-075", "word": "역", "meaning": "station", "rank": 75, "used_in": []},
      {"id": "A1-N-076", "word": "앞", "meaning": "front", "rank": 76, "used_in": []},
      {"id": "A1-N-077", "word": "뒤", "meaning": "back", "rank": 77, "used_in": []},
      {"id": "A1-N-079", "word": "아래", "meaning": "below", "rank": 79, "used_in": []},
      {"id": "A1-N-081", "word": "밖", "meaning": "outside", "rank": 81, "used_in": []},
-     {"id": "A1-N-082", "word": "옆", "meaning": "side/next to", "rank": 82, "used_in": []},
      {"id": "A1-N-083", "word": "여기", "meaning": "here", "rank": 83, "used_in": []},
      {"id": "A1-N-084", "word": "거기", "meaning": "there", "rank": 84, "used_in": []},
      {"id": "A1-N-085", "word": "저기", "meaning": "over there", "rank": 85, "used_in": []},
-     {"id": "A1-N-086", "word": "날씨", "meaning": "weather", "rank": 86, "used_in": []},
      {"id": "A1-N-087", "word": "비", "meaning": "rain", "rank": 87, "used_in": []},
-     {"id": "A1-N-088", "word": "눈", "meaning": "snow/eye", "rank": 88, "used_in": []},
-     {"id": "A1-N-089", "word": "손", "meaning": "hand", "rank": 89, "used_in": []},
      {"id": "A1-N-090", "word": "머리", "meaning": "head/hair", "rank": 90, "used_in": []},
      {"id": "A1-N-091", "word": "얼굴", "meaning": "face", "rank": 91, "used_in": []},
      {"id": "A1-N-092", "word": "몸", "meaning": "body", "rank": 92, "used_in": []},
@@ -99,11 +91,9 @@
      {"id": "A1-N-095", "word": "사진", "meaning": "photo", "rank": 95, "used_in": []},
      {"id": "A1-N-096", "word": "여행", "meaning": "trip", "rank": 96, "used_in": []},
      {"id": "A1-N-098", "word": "사과", "meaning": "apple", "rank": 98, "used_in": []},
-     {"id": "A1-N-101", "word": "커피", "meaning": "coffee", "rank": 101, "used_in": []},
      {"id": "A1-N-103", "word": "빵", "meaning": "bread", "rank": 103, "used_in": []},
      {"id": "A1-N-104", "word": "물건", "meaning": "item/thing", "rank": 104, "used_in": []},
      {"id": "A1-N-106", "word": "개", "meaning": "dog/(counter)", "rank": 106, "used_in": []},
-     {"id": "A1-N-107", "word": "고양이", "meaning": "cat", "rank": 107, "used_in": []},
      {"id": "A1-N-108", "word": "회사원", "meaning": "office worker", "rank": 108, "used_in": []},
      {"id": "A1-N-109", "word": "저", "meaning": "I (humble)", "rank": 109, "used_in": []},
      {"id": "A1-N-110", "word": "나", "meaning": "I/me", "rank": 110, "used_in": []},
@@ -113,7 +103,6 @@
      {"id": "A1-N-114", "word": "무엇", "meaning": "what", "rank": 114, "used_in": []},
      {"id": "A1-N-115", "word": "어디", "meaning": "where", "rank": 115, "used_in": []},
      {"id": "A1-N-116", "word": "언제", "meaning": "when", "rank": 116, "used_in": []},
-     {"id": "A1-N-117", "word": "하나", "meaning": "one", "rank": 117, "used_in": []},
      {"id": "A1-N-118", "word": "둘", "meaning": "two", "rank": 118, "used_in": []},
      {"id": "A1-N-119", "word": "셋", "meaning": "three", "rank": 119, "used_in": []},
      {"id": "A1-N-120", "word": "넷", "meaning": "four", "rank": 120, "used_in": []},
@@ -186,8 +175,6 @@
      {"id": "A1-N-187", "word": "귤", "meaning": "tangerine", "rank": 187, "used_in": []},
      {"id": "A1-N-188", "word": "남자친구", "meaning": "boyfriend", "rank": 188, "used_in": []},
      {"id": "A1-N-189", "word": "여자친구", "meaning": "girlfriend", "rank": 189, "used_in": []},
-     {"id": "A1-N-190", "word": "아저씨", "meaning": "middle-aged man", "rank": 190, "used_in": []},
-     {"id": "A1-N-191", "word": "아주머니", "meaning": "middle-aged woman", "rank": 191, "used_in": []},
      {"id": "A1-N-192", "word": "사장님", "meaning": "boss/owner", "rank": 192, "used_in": []},
      {"id": "A1-N-193", "word": "경찰", "meaning": "police", "rank": 193, "used_in": []},
      {"id": "A1-N-194", "word": "요리사", "meaning": "cook/chef", "rank": 194, "used_in": []},
@@ -224,24 +211,38 @@
      {"id": "A1-N-226", "word": "산책", "meaning": "walk/stroll", "rank": 226, "used_in": []},
      {"id": "A1-N-227", "word": "쇼핑", "meaning": "shopping", "rank": 227, "used_in": []},
      {"id": "A1-N-229", "word": "파티", "meaning": "party", "rank": 229, "used_in": []},
-     {"id": "A1-N-230", "word": "꽃", "meaning": "flower", "rank": 230, "used_in": []},
      {"id": "A1-N-231", "word": "나무", "meaning": "tree", "rank": 231, "used_in": []},
      {"id": "A1-N-232", "word": "새", "meaning": "bird", "rank": 232, "used_in": []}
     ],
     "사용": [
+     {"id": "A1-N-001", "word": "사람", "meaning": "person", "rank": 1, "used_in": ["S003"]},
      {"id": "A1-N-004", "word": "집", "meaning": "house", "rank": 4, "used_in": ["S002"]},
      {"id": "A1-N-010", "word": "물", "meaning": "water", "rank": 10, "used_in": ["S002"]},
+     {"id": "A1-N-011", "word": "오늘", "meaning": "today", "rank": 11, "used_in": ["S003"]},
      {"id": "A1-N-015", "word": "밥", "meaning": "rice/meal", "rank": 15, "used_in": ["S002"]},
+     {"id": "A1-N-047", "word": "가방", "meaning": "bag", "rank": 47, "used_in": ["S003"]},
+     {"id": "A1-N-059", "word": "한국", "meaning": "Korea", "rank": 59, "used_in": ["S003"]},
      {"id": "A1-N-068", "word": "마트", "meaning": "supermarket", "rank": 68, "used_in": ["S001"]},
+     {"id": "A1-N-074", "word": "길", "meaning": "road/way", "rank": 74, "used_in": ["S003"]},
      {"id": "A1-N-078", "word": "위", "meaning": "top/above", "rank": 78, "used_in": ["S002"]},
      {"id": "A1-N-080", "word": "안", "meaning": "inside", "rank": 80, "used_in": ["S002"]},
+     {"id": "A1-N-082", "word": "옆", "meaning": "side/next to", "rank": 82, "used_in": ["S003"]},
+     {"id": "A1-N-086", "word": "날씨", "meaning": "weather", "rank": 86, "used_in": ["S003"]},
+     {"id": "A1-N-088", "word": "눈", "meaning": "snow/eye", "rank": 88, "used_in": ["S003"]},
+     {"id": "A1-N-089", "word": "손", "meaning": "hand", "rank": 89, "used_in": ["S003"]},
      {"id": "A1-N-097", "word": "과일", "meaning": "fruit", "rank": 97, "used_in": ["S001"]},
      {"id": "A1-N-099", "word": "고기", "meaning": "meat", "rank": 99, "used_in": ["S001"]},
      {"id": "A1-N-100", "word": "김치", "meaning": "kimchi", "rank": 100, "used_in": ["S002"]},
+     {"id": "A1-N-101", "word": "커피", "meaning": "coffee", "rank": 101, "used_in": ["S003"]},
      {"id": "A1-N-102", "word": "우유", "meaning": "milk", "rank": 102, "used_in": ["S001"]},
      {"id": "A1-N-105", "word": "가격", "meaning": "price", "rank": 105, "used_in": ["S001"]},
+     {"id": "A1-N-107", "word": "고양이", "meaning": "cat", "rank": 107, "used_in": ["S003"]},
+     {"id": "A1-N-117", "word": "하나", "meaning": "one", "rank": 117, "used_in": ["S003"]},
+     {"id": "A1-N-190", "word": "아저씨", "meaning": "middle-aged man", "rank": 190, "used_in": ["S003"]},
+     {"id": "A1-N-191", "word": "아주머니", "meaning": "middle-aged woman", "rank": 191, "used_in": ["S003"]},
      {"id": "A1-N-218", "word": "빨간색", "meaning": "red", "rank": 218, "used_in": ["S002"]},
-     {"id": "A1-N-228", "word": "요리", "meaning": "cooking/dish", "rank": 228, "used_in": ["S002"]}
+     {"id": "A1-N-228", "word": "요리", "meaning": "cooking/dish", "rank": 228, "used_in": ["S002"]},
+     {"id": "A1-N-230", "word": "꽃", "meaning": "flower", "rank": 230, "used_in": ["S003"]}
     ]
    },
    "동사": {
@@ -251,8 +252,6 @@
      {"id": "A1-V-003", "word": "없다", "meaning": "not exist/not have", "rank": 3, "used_in": []},
      {"id": "A1-V-004", "word": "이다", "meaning": "be (copula)", "rank": 4, "used_in": []},
      {"id": "A1-V-005", "word": "아니다", "meaning": "be not", "rank": 5, "used_in": []},
-     {"id": "A1-V-006", "word": "가다", "meaning": "go", "rank": 6, "used_in": []},
-     {"id": "A1-V-007", "word": "오다", "meaning": "come", "rank": 7, "used_in": []},
      {"id": "A1-V-008", "word": "보다", "meaning": "see/watch", "rank": 8, "used_in": []},
      {"id": "A1-V-011", "word": "알다", "meaning": "know", "rank": 11, "used_in": []},
      {"id": "A1-V-012", "word": "모르다", "meaning": "not know", "rank": 12, "used_in": []},
@@ -262,7 +261,6 @@
      {"id": "A1-V-017", "word": "만나다", "meaning": "meet", "rank": 17, "used_in": []},
      {"id": "A1-V-018", "word": "자다", "meaning": "sleep", "rank": 18, "used_in": []},
      {"id": "A1-V-019", "word": "일어나다", "meaning": "get up", "rank": 19, "used_in": []},
-     {"id": "A1-V-020", "word": "앉다", "meaning": "sit", "rank": 20, "used_in": []},
      {"id": "A1-V-021", "word": "서다", "meaning": "stand", "rank": 21, "used_in": []},
      {"id": "A1-V-022", "word": "읽다", "meaning": "read", "rank": 22, "used_in": []},
      {"id": "A1-V-023", "word": "쓰다", "meaning": "write/use", "rank": 23, "used_in": []},
@@ -282,11 +280,9 @@
      {"id": "A1-V-038", "word": "씻다", "meaning": "wash", "rank": 38, "used_in": []},
      {"id": "A1-V-041", "word": "타다", "meaning": "ride/get on", "rank": 41, "used_in": []},
      {"id": "A1-V-042", "word": "내리다", "meaning": "get off", "rank": 42, "used_in": []},
-     {"id": "A1-V-043", "word": "걷다", "meaning": "walk", "rank": 43, "used_in": []},
      {"id": "A1-V-044", "word": "찾다", "meaning": "find/look for", "rank": 44, "used_in": []},
      {"id": "A1-V-045", "word": "들어가다", "meaning": "go in", "rank": 45, "used_in": []},
      {"id": "A1-V-046", "word": "나가다", "meaning": "go out", "rank": 46, "used_in": []},
-     {"id": "A1-V-047", "word": "운동하다", "meaning": "exercise", "rank": 47, "used_in": []},
      {"id": "A1-V-049", "word": "전화하다", "meaning": "call", "rank": 49, "used_in": []},
      {"id": "A1-V-050", "word": "사랑하다", "meaning": "love", "rank": 50, "used_in": []},
      {"id": "A1-V-051", "word": "갖다", "meaning": "have", "rank": 51, "used_in": []},
@@ -295,7 +291,6 @@
      {"id": "A1-V-054", "word": "나다", "meaning": "come out/occur", "rank": 54, "used_in": []},
      {"id": "A1-V-055", "word": "놓다", "meaning": "put/place", "rank": 55, "used_in": []},
      {"id": "A1-V-056", "word": "두다", "meaning": "put/leave", "rank": 56, "used_in": []},
-     {"id": "A1-V-057", "word": "잡다", "meaning": "catch/hold", "rank": 57, "used_in": []},
      {"id": "A1-V-058", "word": "걸리다", "meaning": "take (time)/be caught", "rank": 58, "used_in": []},
      {"id": "A1-V-059", "word": "걸다", "meaning": "hang/make (a call)", "rank": 59, "used_in": []},
      {"id": "A1-V-060", "word": "끊다", "meaning": "hang up/quit", "rank": 60, "used_in": []},
@@ -303,14 +298,11 @@
      {"id": "A1-V-062", "word": "돌아가다", "meaning": "go back", "rank": 62, "used_in": []},
      {"id": "A1-V-063", "word": "돌아오다", "meaning": "come back", "rank": 63, "used_in": []},
      {"id": "A1-V-064", "word": "들어오다", "meaning": "come in", "rank": 64, "used_in": []},
-     {"id": "A1-V-065", "word": "올라가다", "meaning": "go up", "rank": 65, "used_in": []},
-     {"id": "A1-V-066", "word": "내려가다", "meaning": "go down", "rank": 66, "used_in": []},
      {"id": "A1-V-067", "word": "건너다", "meaning": "cross", "rank": 67, "used_in": []},
      {"id": "A1-V-068", "word": "끝내다", "meaning": "finish", "rank": 68, "used_in": []},
      {"id": "A1-V-069", "word": "원하다", "meaning": "want", "rank": 69, "used_in": []},
      {"id": "A1-V-070", "word": "이야기하다", "meaning": "talk", "rank": 70, "used_in": []},
      {"id": "A1-V-071", "word": "질문하다", "meaning": "ask a question", "rank": 71, "used_in": []},
-     {"id": "A1-V-072", "word": "가져오다", "meaning": "bring", "rank": 72, "used_in": []},
      {"id": "A1-V-073", "word": "가져가다", "meaning": "take (along)", "rank": 73, "used_in": []},
      {"id": "A1-V-074", "word": "데려가다", "meaning": "take (a person)", "rank": 74, "used_in": []},
      {"id": "A1-V-075", "word": "그리다", "meaning": "draw", "rank": 75, "used_in": []},
@@ -332,13 +324,22 @@
      {"id": "A1-V-091", "word": "말씀하다", "meaning": "speak (honorific)", "rank": 91, "used_in": []}
     ],
     "사용": [
+     {"id": "A1-V-006", "word": "가다", "meaning": "go", "rank": 6, "used_in": ["S003"]},
+     {"id": "A1-V-007", "word": "오다", "meaning": "come", "rank": 7, "used_in": ["S003"]},
      {"id": "A1-V-009", "word": "먹다", "meaning": "eat", "rank": 9, "used_in": ["S002"]},
      {"id": "A1-V-010", "word": "마시다", "meaning": "drink", "rank": 10, "used_in": ["S002"]},
      {"id": "A1-V-015", "word": "사다", "meaning": "buy", "rank": 15, "used_in": ["S001"]},
+     {"id": "A1-V-020", "word": "앉다", "meaning": "sit", "rank": 20, "used_in": ["S003"]},
      {"id": "A1-V-031", "word": "좋아하다", "meaning": "like", "rank": 31, "used_in": ["S001"]},
      {"id": "A1-V-039", "word": "열다", "meaning": "open", "rank": 39, "used_in": ["S002"]},
      {"id": "A1-V-040", "word": "닫다", "meaning": "close", "rank": 40, "used_in": ["S002"]},
-     {"id": "A1-V-048", "word": "요리하다", "meaning": "cook", "rank": 48, "used_in": ["S002"]}
+     {"id": "A1-V-043", "word": "걷다", "meaning": "walk", "rank": 43, "used_in": ["S003"]},
+     {"id": "A1-V-047", "word": "운동하다", "meaning": "exercise", "rank": 47, "used_in": ["S003"]},
+     {"id": "A1-V-048", "word": "요리하다", "meaning": "cook", "rank": 48, "used_in": ["S002"]},
+     {"id": "A1-V-057", "word": "잡다", "meaning": "catch/hold", "rank": 57, "used_in": ["S003"]},
+     {"id": "A1-V-065", "word": "올라가다", "meaning": "go up", "rank": 65, "used_in": ["S003"]},
+     {"id": "A1-V-066", "word": "내려가다", "meaning": "go down", "rank": 66, "used_in": ["S003"]},
+     {"id": "A1-V-072", "word": "가져오다", "meaning": "bring", "rank": 72, "used_in": ["S003"]}
     ]
    },
    "형용사": {
@@ -363,7 +364,6 @@
      {"id": "A1-ADJ-023", "word": "가깝다", "meaning": "near", "rank": 23, "used_in": []},
      {"id": "A1-ADJ-024", "word": "길다", "meaning": "long", "rank": 24, "used_in": []},
      {"id": "A1-ADJ-025", "word": "짧다", "meaning": "short", "rank": 25, "used_in": []},
-     {"id": "A1-ADJ-026", "word": "높다", "meaning": "high", "rank": 26, "used_in": []},
      {"id": "A1-ADJ-027", "word": "낮다", "meaning": "low", "rank": 27, "used_in": []},
      {"id": "A1-ADJ-028", "word": "적다", "meaning": "few/little", "rank": 28, "used_in": []},
      {"id": "A1-ADJ-029", "word": "쉽다", "meaning": "easy", "rank": 29, "used_in": []},
@@ -373,7 +373,6 @@
      {"id": "A1-ADJ-034", "word": "그렇다", "meaning": "be so", "rank": 34, "used_in": []},
      {"id": "A1-ADJ-035", "word": "이렇다", "meaning": "be like this", "rank": 35, "used_in": []},
      {"id": "A1-ADJ-036", "word": "똑같다", "meaning": "exactly the same", "rank": 36, "used_in": []},
-     {"id": "A1-ADJ-037", "word": "힘들다", "meaning": "hard/tough", "rank": 37, "used_in": []},
      {"id": "A1-ADJ-038", "word": "반갑다", "meaning": "glad (to see)", "rank": 38, "used_in": []},
      {"id": "A1-ADJ-039", "word": "궁금하다", "meaning": "curious", "rank": 39, "used_in": []},
      {"id": "A1-ADJ-040", "word": "빠르다", "meaning": "fast", "rank": 40, "used_in": []},
@@ -398,14 +397,14 @@
      {"id": "A1-ADJ-014", "word": "비싸다", "meaning": "expensive", "rank": 14, "used_in": ["S001"]},
      {"id": "A1-ADJ-015", "word": "싸다", "meaning": "cheap", "rank": 15, "used_in": ["S001"]},
      {"id": "A1-ADJ-018", "word": "뜨겁다", "meaning": "hot (to touch)", "rank": 18, "used_in": ["S002"]},
-     {"id": "A1-ADJ-031", "word": "배고프다", "meaning": "hungry", "rank": 31, "used_in": ["S002"]}
+     {"id": "A1-ADJ-026", "word": "높다", "meaning": "high", "rank": 26, "used_in": ["S003"]},
+     {"id": "A1-ADJ-031", "word": "배고프다", "meaning": "hungry", "rank": 31, "used_in": ["S002"]},
+     {"id": "A1-ADJ-037", "word": "힘들다", "meaning": "hard/tough", "rank": 37, "used_in": ["S003"]}
     ]
    },
    "부사": {
     "미사용": [
-     {"id": "A1-ADV-001", "word": "지금", "meaning": "now", "rank": 1, "used_in": []},
      {"id": "A1-ADV-002", "word": "안", "meaning": "not", "rank": 2, "used_in": []},
-     {"id": "A1-ADV-003", "word": "못", "meaning": "cannot", "rank": 3, "used_in": []},
      {"id": "A1-ADV-004", "word": "잘", "meaning": "well", "rank": 4, "used_in": []},
      {"id": "A1-ADV-005", "word": "아주", "meaning": "very", "rank": 5, "used_in": []},
      {"id": "A1-ADV-006", "word": "너무", "meaning": "too/so", "rank": 6, "used_in": []},
@@ -432,11 +431,9 @@
      {"id": "A1-ADV-029", "word": "얼마나", "meaning": "how much", "rank": 29, "used_in": []},
      {"id": "A1-ADV-030", "word": "좀", "meaning": "a little/please", "rank": 30, "used_in": []},
      {"id": "A1-ADV-032", "word": "그런데", "meaning": "but/by the way", "rank": 32, "used_in": []},
-     {"id": "A1-ADV-033", "word": "그래서", "meaning": "so", "rank": 33, "used_in": []},
      {"id": "A1-ADV-034", "word": "하지만", "meaning": "but", "rank": 34, "used_in": []},
      {"id": "A1-ADV-035", "word": "그러면", "meaning": "then/if so", "rank": 35, "used_in": []},
      {"id": "A1-ADV-036", "word": "그럼", "meaning": "then (casual)", "rank": 36, "used_in": []},
-     {"id": "A1-ADV-037", "word": "이제", "meaning": "now", "rank": 37, "used_in": []},
      {"id": "A1-ADV-038", "word": "참", "meaning": "truly", "rank": 38, "used_in": []},
      {"id": "A1-ADV-039", "word": "늘", "meaning": "always", "rank": 39, "used_in": []},
      {"id": "A1-ADV-040", "word": "언제나", "meaning": "always", "rank": 40, "used_in": []},
@@ -447,9 +444,13 @@
      {"id": "A1-ADV-045", "word": "쭉", "meaning": "straight/all along", "rank": 45, "used_in": []}
     ],
     "사용": [
+     {"id": "A1-ADV-001", "word": "지금", "meaning": "now", "rank": 1, "used_in": ["S003"]},
+     {"id": "A1-ADV-003", "word": "못", "meaning": "cannot", "rank": 3, "used_in": ["S003"]},
      {"id": "A1-ADV-010", "word": "조금", "meaning": "a little", "rank": 10, "used_in": ["S001", "S002"]},
      {"id": "A1-ADV-011", "word": "다", "meaning": "all", "rank": 11, "used_in": ["S002"]},
-     {"id": "A1-ADV-031", "word": "그리고", "meaning": "and", "rank": 31, "used_in": ["S002"]}
+     {"id": "A1-ADV-031", "word": "그리고", "meaning": "and", "rank": 31, "used_in": ["S002"]},
+     {"id": "A1-ADV-033", "word": "그래서", "meaning": "so", "rank": 33, "used_in": ["S003"]},
+     {"id": "A1-ADV-037", "word": "이제", "meaning": "now", "rank": 37, "used_in": ["S003"]}
     ]
    }
   },
@@ -508,8 +509,6 @@
      {"id": "A2-N-050", "word": "가을", "meaning": "autumn", "rank": 50, "used_in": []},
      {"id": "A2-N-051", "word": "겨울", "meaning": "winter", "rank": 51, "used_in": []},
      {"id": "A2-N-052", "word": "하늘", "meaning": "sky", "rank": 52, "used_in": []},
-     {"id": "A2-N-053", "word": "바람", "meaning": "wind", "rank": 53, "used_in": []},
-     {"id": "A2-N-054", "word": "산", "meaning": "mountain", "rank": 54, "used_in": []},
      {"id": "A2-N-055", "word": "바다", "meaning": "sea", "rank": 55, "used_in": []},
      {"id": "A2-N-056", "word": "강", "meaning": "river", "rank": 56, "used_in": []},
      {"id": "A2-N-057", "word": "공원", "meaning": "park", "rank": 57, "used_in": []},
@@ -521,7 +520,6 @@
      {"id": "A2-N-063", "word": "다리", "meaning": "leg/bridge", "rank": 63, "used_in": []},
      {"id": "A2-N-064", "word": "팔", "meaning": "arm", "rank": 64, "used_in": []},
      {"id": "A2-N-065", "word": "배", "meaning": "stomach/ship/pear", "rank": 65, "used_in": []},
-     {"id": "A2-N-066", "word": "목", "meaning": "neck/throat", "rank": 66, "used_in": []},
      {"id": "A2-N-067", "word": "입", "meaning": "mouth", "rank": 67, "used_in": []},
      {"id": "A2-N-068", "word": "코", "meaning": "nose", "rank": 68, "used_in": []},
      {"id": "A2-N-069", "word": "귀", "meaning": "ear", "rank": 69, "used_in": []},
@@ -559,7 +557,6 @@
      {"id": "A2-N-109", "word": "기차", "meaning": "train", "rank": 109, "used_in": []},
      {"id": "A2-N-110", "word": "표", "meaning": "ticket", "rank": 110, "used_in": []},
      {"id": "A2-N-111", "word": "정류장", "meaning": "bus stop", "rank": 111, "used_in": []},
-     {"id": "A2-N-112", "word": "지도", "meaning": "map", "rank": 112, "used_in": []},
      {"id": "A2-N-113", "word": "호텔", "meaning": "hotel", "rank": 113, "used_in": []},
      {"id": "A2-N-114", "word": "여권", "meaning": "passport", "rank": 114, "used_in": []},
      {"id": "A2-N-115", "word": "도서관", "meaning": "library", "rank": 115, "used_in": []},
@@ -712,7 +709,6 @@
      {"id": "A2-N-267", "word": "벽", "meaning": "wall", "rank": 267, "used_in": []},
      {"id": "A2-N-268", "word": "바닥", "meaning": "floor", "rank": 268, "used_in": []},
      {"id": "A2-N-269", "word": "천장", "meaning": "ceiling", "rank": 269, "used_in": []},
-     {"id": "A2-N-270", "word": "계단", "meaning": "stairs", "rank": 270, "used_in": []},
      {"id": "A2-N-271", "word": "엘리베이터", "meaning": "elevator", "rank": 271, "used_in": []},
      {"id": "A2-N-272", "word": "현관", "meaning": "front door/entryway", "rank": 272, "used_in": []},
      {"id": "A2-N-273", "word": "마당", "meaning": "yard", "rank": 273, "used_in": []},
@@ -800,7 +796,6 @@
      {"id": "A2-N-356", "word": "초대", "meaning": "invitation", "rank": 356, "used_in": []},
      {"id": "A2-N-357", "word": "피부", "meaning": "skin", "rank": 357, "used_in": []},
      {"id": "A2-N-358", "word": "어깨", "meaning": "shoulder", "rank": 358, "used_in": []},
-     {"id": "A2-N-359", "word": "허리", "meaning": "waist/lower back", "rank": 359, "used_in": []},
      {"id": "A2-N-360", "word": "발", "meaning": "foot", "rank": 360, "used_in": []},
      {"id": "A2-N-361", "word": "손가락", "meaning": "finger", "rank": 361, "used_in": []},
      {"id": "A2-N-362", "word": "발가락", "meaning": "toe", "rank": 362, "used_in": []},
@@ -855,6 +850,9 @@
      {"id": "A2-N-411", "word": "사인", "meaning": "autograph/signature", "rank": 411, "used_in": []}
     ],
     "사용": [
+     {"id": "A2-N-053", "word": "바람", "meaning": "wind", "rank": 53, "used_in": ["S003"]},
+     {"id": "A2-N-054", "word": "산", "meaning": "mountain", "rank": 54, "used_in": ["S003"]},
+     {"id": "A2-N-066", "word": "목", "meaning": "neck/throat", "rank": 66, "used_in": ["S003"]},
      {"id": "A2-N-070", "word": "부엌", "meaning": "kitchen", "rank": 70, "used_in": ["S002"]},
      {"id": "A2-N-075", "word": "냉장고", "meaning": "refrigerator", "rank": 75, "used_in": ["S002"]},
      {"id": "A2-N-080", "word": "그릇", "meaning": "bowl/dish", "rank": 80, "used_in": ["S002"]},
@@ -863,12 +861,15 @@
      {"id": "A2-N-087", "word": "계란", "meaning": "egg", "rank": 87, "used_in": ["S001", "S002"]},
      {"id": "A2-N-088", "word": "소금", "meaning": "salt", "rank": 88, "used_in": ["S002"]},
      {"id": "A2-N-098", "word": "봉투", "meaning": "bag/envelope", "rank": 98, "used_in": ["S001"]},
+     {"id": "A2-N-112", "word": "지도", "meaning": "map", "rank": 112, "used_in": ["S003"]},
      {"id": "A2-N-195", "word": "카트", "meaning": "shopping cart", "rank": 195, "used_in": ["S001"]},
      {"id": "A2-N-233", "word": "양파", "meaning": "onion", "rank": 233, "used_in": ["S002"]},
      {"id": "A2-N-235", "word": "파", "meaning": "green onion", "rank": 235, "used_in": ["S002"]},
      {"id": "A2-N-252", "word": "후추", "meaning": "black pepper", "rank": 252, "used_in": ["S002"]},
      {"id": "A2-N-259", "word": "프라이팬", "meaning": "frying pan", "rank": 259, "used_in": ["S002"]},
-     {"id": "A2-N-277", "word": "불", "meaning": "fire/light", "rank": 277, "used_in": ["S002"]}
+     {"id": "A2-N-270", "word": "계단", "meaning": "stairs", "rank": 270, "used_in": ["S003"]},
+     {"id": "A2-N-277", "word": "불", "meaning": "fire/light", "rank": 277, "used_in": ["S002"]},
+     {"id": "A2-N-359", "word": "허리", "meaning": "waist/lower back", "rank": 359, "used_in": ["S003"]}
     ]
    },
    "동사": {
@@ -895,7 +896,6 @@
      {"id": "A2-V-022", "word": "설명하다", "meaning": "explain", "rank": 22, "used_in": []},
      {"id": "A2-V-023", "word": "이해하다", "meaning": "understand", "rank": 23, "used_in": []},
      {"id": "A2-V-024", "word": "느끼다", "meaning": "feel", "rank": 24, "used_in": []},
-     {"id": "A2-V-025", "word": "믿다", "meaning": "believe", "rank": 25, "used_in": []},
      {"id": "A2-V-027", "word": "부르다", "meaning": "call/sing", "rank": 27, "used_in": []},
      {"id": "A2-V-028", "word": "웃다", "meaning": "laugh/smile", "rank": 28, "used_in": []},
      {"id": "A2-V-029", "word": "울다", "meaning": "cry", "rank": 29, "used_in": []},
@@ -941,18 +941,15 @@
      {"id": "A2-V-075", "word": "넘어지다", "meaning": "fall over", "rank": 75, "used_in": []},
      {"id": "A2-V-076", "word": "부딪치다", "meaning": "bump into", "rank": 76, "used_in": []},
      {"id": "A2-V-077", "word": "돌다", "meaning": "turn/spin", "rank": 77, "used_in": []},
-     {"id": "A2-V-078", "word": "돌리다", "meaning": "turn (sth)", "rank": 78, "used_in": []},
      {"id": "A2-V-079", "word": "멈추다", "meaning": "stop", "rank": 79, "used_in": []},
      {"id": "A2-V-080", "word": "서두르다", "meaning": "hurry", "rank": 80, "used_in": []},
      {"id": "A2-V-081", "word": "놓치다", "meaning": "miss (bus etc.)", "rank": 81, "used_in": []},
      {"id": "A2-V-082", "word": "운전하다", "meaning": "drive", "rank": 82, "used_in": []},
      {"id": "A2-V-083", "word": "주차하다", "meaning": "park", "rank": 83, "used_in": []},
      {"id": "A2-V-084", "word": "갈아입다", "meaning": "change clothes", "rank": 84, "used_in": []},
-     {"id": "A2-V-085", "word": "감다", "meaning": "wash (hair)/close (eyes)", "rank": 85, "used_in": []},
      {"id": "A2-V-086", "word": "빗다", "meaning": "comb", "rank": 86, "used_in": []},
      {"id": "A2-V-087", "word": "정리하다", "meaning": "organize/tidy", "rank": 87, "used_in": []},
      {"id": "A2-V-088", "word": "치우다", "meaning": "clear away", "rank": 88, "used_in": []},
-     {"id": "A2-V-089", "word": "쌓다", "meaning": "pile up", "rank": 89, "used_in": []},
      {"id": "A2-V-091", "word": "싸다", "meaning": "wrap/pack", "rank": 91, "used_in": []},
      {"id": "A2-V-092", "word": "포장하다", "meaning": "wrap/take out (food)", "rank": 92, "used_in": []},
      {"id": "A2-V-093", "word": "나누다", "meaning": "share/divide", "rank": 93, "used_in": []},
@@ -1053,6 +1050,7 @@
     "사용": [
      {"id": "A2-V-003", "word": "만들다", "meaning": "make", "rank": 3, "used_in": ["S002"]},
      {"id": "A2-V-013", "word": "고르다", "meaning": "choose", "rank": 13, "used_in": ["S001"]},
+     {"id": "A2-V-025", "word": "믿다", "meaning": "believe", "rank": 25, "used_in": ["S003"]},
      {"id": "A2-V-026", "word": "확인하다", "meaning": "check", "rank": 26, "used_in": ["S001"]},
      {"id": "A2-V-040", "word": "자르다", "meaning": "cut", "rank": 40, "used_in": ["S002"]},
      {"id": "A2-V-041", "word": "넣다", "meaning": "put in", "rank": 41, "used_in": ["S002"]},
@@ -1060,6 +1058,9 @@
      {"id": "A2-V-043", "word": "켜다", "meaning": "turn on", "rank": 43, "used_in": ["S002"]},
      {"id": "A2-V-051", "word": "계산하다", "meaning": "pay", "rank": 51, "used_in": ["S001"]},
      {"id": "A2-V-057", "word": "올리다", "meaning": "raise/post", "rank": 57, "used_in": ["S002"]},
+     {"id": "A2-V-078", "word": "돌리다", "meaning": "turn (sth)", "rank": 78, "used_in": ["S003"]},
+     {"id": "A2-V-085", "word": "감다", "meaning": "wash (hair)/close (eyes)", "rank": 85, "used_in": ["S003"]},
+     {"id": "A2-V-089", "word": "쌓다", "meaning": "pile up", "rank": 89, "used_in": ["S003"]},
      {"id": "A2-V-090", "word": "담다", "meaning": "put in (a container)", "rank": 90, "used_in": ["S001", "S002"]},
      {"id": "A2-V-094", "word": "섞다", "meaning": "mix", "rank": 94, "used_in": ["S002"]},
      {"id": "A2-V-095", "word": "볶다", "meaning": "stir-fry", "rank": 95, "used_in": ["S002"]},
@@ -1082,7 +1083,6 @@
      {"id": "A2-ADJ-010", "word": "불편하다", "meaning": "uncomfortable", "rank": 10, "used_in": []},
      {"id": "A2-ADJ-012", "word": "더럽다", "meaning": "dirty", "rank": 12, "used_in": []},
      {"id": "A2-ADJ-013", "word": "따뜻하다", "meaning": "warm", "rank": 13, "used_in": []},
-     {"id": "A2-ADJ-014", "word": "시원하다", "meaning": "cool/refreshing", "rank": 14, "used_in": []},
      {"id": "A2-ADJ-015", "word": "조용하다", "meaning": "quiet", "rank": 15, "used_in": []},
      {"id": "A2-ADJ-016", "word": "시끄럽다", "meaning": "noisy", "rank": 16, "used_in": []},
      {"id": "A2-ADJ-017", "word": "무섭다", "meaning": "scary", "rank": 17, "used_in": []},
@@ -1090,7 +1090,6 @@
      {"id": "A2-ADJ-019", "word": "심심하다", "meaning": "bored", "rank": 19, "used_in": []},
      {"id": "A2-ADJ-020", "word": "친절하다", "meaning": "kind", "rank": 20, "used_in": []},
      {"id": "A2-ADJ-021", "word": "멋있다", "meaning": "cool/stylish", "rank": 21, "used_in": []},
-     {"id": "A2-ADJ-022", "word": "귀엽다", "meaning": "cute", "rank": 22, "used_in": []},
      {"id": "A2-ADJ-023", "word": "유명하다", "meaning": "famous", "rank": 23, "used_in": []},
      {"id": "A2-ADJ-024", "word": "건강하다", "meaning": "healthy", "rank": 24, "used_in": []},
      {"id": "A2-ADJ-025", "word": "똑똑하다", "meaning": "smart", "rank": 25, "used_in": []},
@@ -1104,8 +1103,6 @@
      {"id": "A2-ADJ-036", "word": "어둡다", "meaning": "dark", "rank": 36, "used_in": []},
      {"id": "A2-ADJ-037", "word": "간단하다", "meaning": "simple", "rank": 37, "used_in": []},
      {"id": "A2-ADJ-038", "word": "복잡하다", "meaning": "complicated", "rank": 38, "used_in": []},
-     {"id": "A2-ADJ-039", "word": "졸리다", "meaning": "sleepy", "rank": 39, "used_in": []},
-     {"id": "A2-ADJ-040", "word": "목마르다", "meaning": "thirsty", "rank": 40, "used_in": []},
      {"id": "A2-ADJ-041", "word": "새롭다", "meaning": "new", "rank": 41, "used_in": []},
      {"id": "A2-ADJ-042", "word": "비슷하다", "meaning": "similar", "rank": 42, "used_in": []},
      {"id": "A2-ADJ-043", "word": "이상하다", "meaning": "strange", "rank": 43, "used_in": []},
@@ -1159,9 +1156,13 @@
     "사용": [
      {"id": "A2-ADJ-007", "word": "필요하다", "meaning": "necessary", "rank": 7, "used_in": ["S002"]},
      {"id": "A2-ADJ-011", "word": "깨끗하다", "meaning": "clean", "rank": 11, "used_in": ["S002"]},
+     {"id": "A2-ADJ-014", "word": "시원하다", "meaning": "cool/refreshing", "rank": 14, "used_in": ["S003"]},
+     {"id": "A2-ADJ-022", "word": "귀엽다", "meaning": "cute", "rank": 22, "used_in": ["S003"]},
      {"id": "A2-ADJ-027", "word": "맵다", "meaning": "spicy", "rank": 27, "used_in": ["S001", "S002"]},
      {"id": "A2-ADJ-030", "word": "싱겁다", "meaning": "bland", "rank": 30, "used_in": ["S002"]},
-     {"id": "A2-ADJ-033", "word": "무겁다", "meaning": "heavy", "rank": 33, "used_in": ["S001"]}
+     {"id": "A2-ADJ-033", "word": "무겁다", "meaning": "heavy", "rank": 33, "used_in": ["S001"]},
+     {"id": "A2-ADJ-039", "word": "졸리다", "meaning": "sleepy", "rank": 39, "used_in": ["S003"]},
+     {"id": "A2-ADJ-040", "word": "목마르다", "meaning": "thirsty", "rank": 40, "used_in": ["S003"]}
     ]
    },
    "부사": {
@@ -1175,7 +1176,6 @@
      {"id": "A2-ADV-008", "word": "거의", "meaning": "almost", "rank": 8, "used_in": []},
      {"id": "A2-ADV-009", "word": "꼭", "meaning": "surely/must", "rank": 9, "used_in": []},
      {"id": "A2-ADV-010", "word": "아마", "meaning": "probably", "rank": 10, "used_in": []},
-     {"id": "A2-ADV-011", "word": "계속", "meaning": "continuously", "rank": 11, "used_in": []},
      {"id": "A2-ADV-012", "word": "바로", "meaning": "right away", "rank": 12, "used_in": []},
      {"id": "A2-ADV-013", "word": "곧", "meaning": "soon", "rank": 13, "used_in": []},
      {"id": "A2-ADV-014", "word": "금방", "meaning": "soon/quickly", "rank": 14, "used_in": []},
@@ -1196,7 +1196,6 @@
      {"id": "A2-ADV-029", "word": "정말로", "meaning": "truly", "rank": 29, "used_in": []},
      {"id": "A2-ADV-030", "word": "너무나", "meaning": "so very", "rank": 30, "used_in": []},
      {"id": "A2-ADV-031", "word": "굉장히", "meaning": "tremendously", "rank": 31, "used_in": []},
-     {"id": "A2-ADV-032", "word": "엄청", "meaning": "very (casual)", "rank": 32, "used_in": []},
      {"id": "A2-ADV-033", "word": "되게", "meaning": "very (casual)", "rank": 33, "used_in": []},
      {"id": "A2-ADV-034", "word": "완전", "meaning": "totally (casual)", "rank": 34, "used_in": []},
      {"id": "A2-ADV-035", "word": "그래도", "meaning": "still/nevertheless", "rank": 35, "used_in": []},
@@ -1226,7 +1225,9 @@
      {"id": "A2-ADV-059", "word": "대충", "meaning": "roughly", "rank": 59, "used_in": []}
     ],
     "사용": [
-     {"id": "A2-ADV-001", "word": "더", "meaning": "more", "rank": 1, "used_in": ["S002"]}
+     {"id": "A2-ADV-001", "word": "더", "meaning": "more", "rank": 1, "used_in": ["S002"]},
+     {"id": "A2-ADV-011", "word": "계속", "meaning": "continuously", "rank": 11, "used_in": ["S003"]},
+     {"id": "A2-ADV-032", "word": "엄청", "meaning": "very (casual)", "rank": 32, "used_in": ["S003"]}
     ]
    }
   },
@@ -1394,7 +1395,6 @@
      {"id": "B1-N-161", "word": "죽음", "meaning": "death", "rank": 161, "used_in": []},
      {"id": "B1-N-162", "word": "운", "meaning": "luck", "rank": 162, "used_in": []},
      {"id": "B1-N-163", "word": "행운", "meaning": "good luck", "rank": 163, "used_in": []},
-     {"id": "B1-N-164", "word": "소원", "meaning": "wish", "rank": 164, "used_in": []},
      {"id": "B1-N-165", "word": "목적", "meaning": "purpose", "rank": 165, "used_in": []},
      {"id": "B1-N-166", "word": "의지", "meaning": "will", "rank": 166, "used_in": []},
      {"id": "B1-N-167", "word": "결심", "meaning": "resolution", "rank": 167, "used_in": []},
@@ -1561,7 +1561,6 @@
      {"id": "B1-N-328", "word": "식욕", "meaning": "appetite", "rank": 328, "used_in": []},
      {"id": "B1-N-329", "word": "입맛", "meaning": "taste/appetite", "rank": 329, "used_in": []},
      {"id": "B1-N-330", "word": "조리", "meaning": "cooking", "rank": 330, "used_in": []},
-     {"id": "B1-N-331", "word": "뚜껑", "meaning": "lid", "rank": 331, "used_in": []},
      {"id": "B1-N-332", "word": "국자", "meaning": "ladle", "rank": 332, "used_in": []},
      {"id": "B1-N-335", "word": "오븐", "meaning": "oven", "rank": 335, "used_in": []},
      {"id": "B1-N-336", "word": "믹서", "meaning": "blender", "rank": 336, "used_in": []},
@@ -1611,8 +1610,6 @@
      {"id": "B1-N-380", "word": "터널", "meaning": "tunnel", "rank": 380, "used_in": []},
      {"id": "B1-N-381", "word": "사거리", "meaning": "intersection", "rank": 381, "used_in": []},
      {"id": "B1-N-382", "word": "골목", "meaning": "alley", "rank": 382, "used_in": []},
-     {"id": "B1-N-383", "word": "방향", "meaning": "direction", "rank": 383, "used_in": []},
-     {"id": "B1-N-384", "word": "위치", "meaning": "location", "rank": 384, "used_in": []},
      {"id": "B1-N-385", "word": "거리", "meaning": "distance/street", "rank": 385, "used_in": []},
      {"id": "B1-N-386", "word": "목적지", "meaning": "destination", "rank": 386, "used_in": []},
      {"id": "B1-N-387", "word": "교통 체증", "meaning": "traffic jam", "rank": 387, "used_in": []},
@@ -1827,7 +1824,6 @@
      {"id": "B1-N-596", "word": "씨앗", "meaning": "seed", "rank": 596, "used_in": []},
      {"id": "B1-N-597", "word": "풀", "meaning": "grass/glue", "rank": 597, "used_in": []},
      {"id": "B1-N-598", "word": "흙", "meaning": "soil", "rank": 598, "used_in": []},
-     {"id": "B1-N-599", "word": "돌", "meaning": "stone", "rank": 599, "used_in": []},
      {"id": "B1-N-600", "word": "바위", "meaning": "rock", "rank": 600, "used_in": []},
      {"id": "B1-N-601", "word": "모래", "meaning": "sand", "rank": 601, "used_in": []},
      {"id": "B1-N-602", "word": "땅", "meaning": "ground/land", "rank": 602, "used_in": []},
@@ -1840,8 +1836,13 @@
     "사용": [
      {"id": "B1-N-110", "word": "재료", "meaning": "ingredient", "rank": 110, "used_in": ["S002"]},
      {"id": "B1-N-114", "word": "냄새", "meaning": "smell", "rank": 114, "used_in": ["S002"]},
+     {"id": "B1-N-164", "word": "소원", "meaning": "wish", "rank": 164, "used_in": ["S003"]},
+     {"id": "B1-N-331", "word": "뚜껑", "meaning": "lid", "rank": 331, "used_in": ["S003"]},
      {"id": "B1-N-333", "word": "주걱", "meaning": "rice paddle", "rank": 333, "used_in": ["S002"]},
-     {"id": "B1-N-334", "word": "밥솥", "meaning": "rice cooker", "rank": 334, "used_in": ["S002"]}
+     {"id": "B1-N-334", "word": "밥솥", "meaning": "rice cooker", "rank": 334, "used_in": ["S002"]},
+     {"id": "B1-N-383", "word": "방향", "meaning": "direction", "rank": 383, "used_in": ["S003"]},
+     {"id": "B1-N-384", "word": "위치", "meaning": "location", "rank": 384, "used_in": ["S003"]},
+     {"id": "B1-N-599", "word": "돌", "meaning": "stone", "rank": 599, "used_in": ["S003"]}
     ]
    },
    "동사": {
@@ -1908,7 +1909,6 @@
      {"id": "B1-V-060", "word": "놀라다", "meaning": "be surprised", "rank": 60, "used_in": []},
      {"id": "B1-V-061", "word": "피하다", "meaning": "avoid", "rank": 61, "used_in": []},
      {"id": "B1-V-062", "word": "버리다", "meaning": "throw away", "rank": 62, "used_in": []},
-     {"id": "B1-V-063", "word": "줍다", "meaning": "pick up", "rank": 63, "used_in": []},
      {"id": "B1-V-064", "word": "아끼다", "meaning": "save/cherish", "rank": 64, "used_in": []},
      {"id": "B1-V-065", "word": "낭비하다", "meaning": "waste", "rank": 65, "used_in": []},
      {"id": "B1-V-066", "word": "모이다", "meaning": "gather", "rank": 66, "used_in": []},
@@ -2094,8 +2094,6 @@
      {"id": "B1-V-246", "word": "분리하다", "meaning": "separate", "rank": 246, "used_in": []},
      {"id": "B1-V-247", "word": "재활용하다", "meaning": "recycle", "rank": 247, "used_in": []},
      {"id": "B1-V-248", "word": "썩다", "meaning": "rot", "rank": 248, "used_in": []},
-     {"id": "B1-V-249", "word": "피다", "meaning": "bloom", "rank": 249, "used_in": []},
-     {"id": "B1-V-250", "word": "불다", "meaning": "blow", "rank": 250, "used_in": []},
      {"id": "B1-V-251", "word": "흐르다", "meaning": "flow", "rank": 251, "used_in": []},
      {"id": "B1-V-252", "word": "비치다", "meaning": "shine/be reflected", "rank": 252, "used_in": []},
      {"id": "B1-V-253", "word": "뜨다", "meaning": "rise/float", "rank": 253, "used_in": []},
@@ -2132,11 +2130,15 @@
      {"id": "B1-V-284", "word": "탑승하다", "meaning": "board", "rank": 284, "used_in": []},
      {"id": "B1-V-285", "word": "환승하다", "meaning": "transfer", "rank": 285, "used_in": []},
      {"id": "B1-V-286", "word": "지연되다", "meaning": "be delayed", "rank": 286, "used_in": []},
-     {"id": "B1-V-287", "word": "막히다", "meaning": "be blocked/jammed", "rank": 287, "used_in": []},
      {"id": "B1-V-288", "word": "밀리다", "meaning": "be backed up", "rank": 288, "used_in": []},
      {"id": "B1-V-289", "word": "충돌하다", "meaning": "collide/clash", "rank": 289, "used_in": []}
     ],
-    "사용": []
+    "사용": [
+     {"id": "B1-V-063", "word": "줍다", "meaning": "pick up", "rank": 63, "used_in": ["S003"]},
+     {"id": "B1-V-249", "word": "피다", "meaning": "bloom", "rank": 249, "used_in": ["S003"]},
+     {"id": "B1-V-250", "word": "불다", "meaning": "blow", "rank": 250, "used_in": ["S003"]},
+     {"id": "B1-V-287", "word": "막히다", "meaning": "be blocked/jammed", "rank": 287, "used_in": ["S003"]}
+    ]
    },
    "형용사": {
     "미사용": [

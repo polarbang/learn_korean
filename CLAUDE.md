@@ -6,12 +6,15 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
 ## 파일 구성
 - `vocab.json` — 전체 어휘 3,237개. 레벨 → 품사 → 미사용/사용 구조. **직접 편집하지 말고 `vocab.py`로만 상태를 바꾼다.**
 - `vocab.py` — 어휘 상태 관리 스크립트
-- `sessions/` — 세션 결과물 (`S001_마트에서.md` 형식)
-- `sessions/_template.md` — 세션 파일 양식
-- `assets/common/` — 모든 영상에서 쓰는 공용 강조 에셋 (동그라미·원·네모·밑줄·화살표·체크·엑스·가리키는 손·숫자 1~9, 움직이는 MOV — CapCut용). 생성기 `make_overlays.py`, 설명 `README.md`
-- `assets.py` · `icon_map.json` · `icons/` — 단어 아이콘 관리 (아래 '아이콘 에셋 자동화'). 한번 정한 아이콘은 `icon_map.json`에 남아 다음 세션에서 재사용된다
-- `assets/icons/make_icons.py` — Fluent에 없는 단어 아이콘 생성기 (Fluent 이모지 합성 또는 직접 그림 → `assets/icons/made/`). 새 단어가 생기면 `RECIPES`에 추가하고 `assets.py set --file`로 등록
-- `study/` — 세션별 학습 자료 (`S001_동네마트에서_학습.md` 형식). 양식은 `study/_template.md`
+- **원칙**: 여러 회차에서 다시 쓰는 것은 `common_assets/`(강조 에셋)·`icons/`(단어 아이콘 원본), 한 회차에만 쓰는 것은 `sessions/S###/`에 둔다.
+- `sessions/S###/` — 회차 하나의 재료를 모두 모은 폴더
+  - `S###_상황.md` (세션 대본) · `S###_상황_학습.md` (학습 자료) · `S###_captions/` (자막 — 한국어 원본 `S###_captions.kr.sbv`, 번역 `S###_captions.<코드>.sbv`, 생성기 `make_captions.py`) · `S###_description.txt` · `S###_pinned_comment.txt` · `S###_assets/` (그 회차 아이콘 복사본 + `report.md`)
+- `sessions/_template.md` — 세션 파일 양식 · `sessions/_study_template.md` — 학습 자료 양식
+- `common_assets/` — 모든 영상에서 쓰는 공용 강조 에셋 (동그라미·원·네모·밑줄·화살표·체크·엑스·가리키는 손·숫자 1~9). `mov/`(CapCut용, git에 없음 — 생성기로 다시 만듦) · `png/` · 생성기 `make_overlays.py` · 원본 `_src/` · 설명 `README.md`
+- `icons/` — 단어 아이콘 (아래 '아이콘 에셋 자동화'). 관리 스크립트는 루트의 `assets.py`
+  - `library/` — 단어 id별 아이콘 원본 (`A1-N-001_사람.png`). 회차가 바뀌어도 재사용
+  - `icon_map.json` — 단어 id → 아이콘 매핑. 한번 정한 아이콘은 여기 남아 다음 세션에서 재사용된다
+  - `make_icons.py` · `made/` — Fluent에 없는 단어 아이콘 생성기와 그 결과 (Fluent 이모지 합성 또는 직접 그림). 새 단어가 생기면 `RECIPES`에 추가하고 `assets.py set --file`로 등록
 
 ## vocab.json 구조
 - `levels.{A1|A2|B1|B2}.{명사|동사|형용사|부사}.{미사용|사용}` → 단어 목록
@@ -44,31 +47,39 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
 7. `python vocab.py find <단어>`로 반영 결과를 확인한다.
 8. `python assets.py fetch S###`로 아이콘을 모은다 (아래 '아이콘 에셋 자동화').
 9. `report.md`의 '검토 필요' 항목을 확인하고 `set`으로 확정한다.
-10. 못 찾은 단어는 먼저 `assets/icons/make_icons.py`로 Fluent 이모지를 합성하거나 직접 그려서 `set --file`로 등록한다. 그래도 안 되는 것만 사용자에게 알린다.
-11. 세션 파일의 새 단어로 `study/S###_상황_학습.md` 학습 자료를 만든다 (아래 규칙).
+10. 못 찾은 단어는 먼저 `icons/make_icons.py`로 Fluent 이모지를 합성하거나 직접 그려서 `set --file`로 등록한다. 그래도 안 되는 것만 사용자에게 알린다.
+11. 세션 파일의 새 단어로 `sessions/S###/S###_상황_학습.md` 학습 자료를 만든다 (양식 `sessions/_study_template.md`, 아래 규칙).
 
-## 학습 자료 규칙 (`study/`)
+## 학습 자료 규칙 (`sessions/S###/S###_상황_학습.md`)
 - 독자는 외국인 학습자. 설명 문구는 영어로 쓴다.
-- **Notion 게시**: 작성 후 Notion MCP로 상위 페이지 "Learn Korean with Mino"(id `3f045badf81c80f89033d08067b0a291`) 아래에 하위 페이지로 만든다.
-  - 제목: `Ep. N · <영상 제목(영어)> — Study Notes` (S001 → Ep. 1), 상황에 맞는 이모지 아이콘.
+- **Notion 게시**: 작성 후 Notion MCP로 상위 페이지 "Learn Korean with Mino - Study Notes"(id `3f045badf81c80f89033d08067b0a291`) 아래에 하위 페이지로 만든다.
+  - 제목: `Ep. N · <영상 제목(영어)>` (S001 → Ep. 1, 상위 페이지 이름에 Study Notes가 있으므로 붙이지 않음), 상황에 맞는 이모지 아이콘.
   - 맨 위에 📺 callout: 어느 유튜브 영상의 학습 자료인지 + 영상 링크 자리.
   - 표는 Notion `<table>` 태그로, 예문의 로마자·번역 줄은 탭 들여쓰기(번호 목록의 하위 줄), ⚠ 불규칙 설명은 노란 callout.
-  - **레이아웃**: 섹션 순서는 How to read → Words in this video → Verbs → Adjectives → Adverbs → Grammar Point.
-    - 섹션 제목(H2)에 번호를 붙이지 않고 색 배경으로 구분한다 (How to read gray · Verbs green · Adjectives yellow · Adverbs orange · Grammar purple, Words in this video는 색 없음). `---` 구분선은 쓰지 않는다.
-    - 맨 위 callout 바로 아래에 목차(`<table_of_contents/>`).
-    - 동사·형용사·부사의 각 단어는 토글 제목(`### 사다 · to buy {toggle="true"}` — 제목에 발음은 넣지 않음, 펼치면 표의 Dictionary form 줄에 나옴)으로, 내용은 탭 들여쓰기해서 접히게. 부사는 활용형 표가 없으므로 토글 첫 줄에 `**Sound:** jo-geum`.
-    - How to read this page 마지막 항목에 토글 안내를 넣는다: "In **Verbs**, **Adjectives** and **Adverbs**, each word is folded. Tap the word (▸) to open it and see its forms and example sentences." (Notion 전용 — md 파일에는 토글이 없으므로 넣지 않음)
-    - Grammar Point는 보라색 callout 안에 넣는다.
+  - **레이아웃**: 섹션 순서는 How to read → Nouns → Verbs → Adjectives → Adverbs → Expressions → Grammar Point. 해당 단어가 없는 섹션은 만들지 않는다 (Expressions는 표현이 있을 때만).
+    - 섹션 제목(H2)에 번호를 붙이지 않고 색 배경으로 구분한다 (How to read gray · Nouns blue · Verbs green · Adjectives yellow · Adverbs orange · Expressions pink · Grammar purple). `---` 구분선은 쓰지 않는다.
+    - 목차(`<table_of_contents/>`)는 넣지 않는다 (토글 제목까지 단어가 전부 나열되어 너저분함).
+    - 영상 타임스탬프(장면 링크)는 넣지 않는다.
+    - 동사·형용사·부사·표현의 각 단어는 토글 제목(`### 사다 {toggle="true"}` — 제목에는 단어만. 뜻·발음은 섹션 맨 위 표에 있으므로 넣지 않음)으로, 내용은 탭 들여쓰기해서 접히게.
+    - How to read this page 마지막 항목에 토글 안내를 넣는다: "In **Verbs**, **Adjectives** and **Adverbs**, each word is folded. Tap the word (▸) to open it and see its forms and example sentences." Expressions 섹션이 있으면 "In **Verbs**, **Adjectives**, **Adverbs** and **Expressions**, …". (Notion 전용 — md 파일에는 토글이 없으므로 넣지 않음)
+    - Grammar Point는 제목(H2)에만 보라색 배경을 주고, 내용은 callout 없이 일반 본문으로 쓴다 (callout은 기본색도 배경이 깔림).
   - Notion 마크다운 주의: `[ ]`는 `\[ \]`로 이스케이프, 빈칸은 `___` 대신 전각 `＿＿` (밑줄이 굵게/기울임으로 바뀜).
   - 토글 제목을 고칠 때는 `update_content`의 old_str/new_str에 ` {toggle="true"}`까지 꼭 포함한다. 제목 글자만 바꾸면 토글이 풀리고 안의 내용이 밖으로 빠져나온다. 수정 후 fetch로 토글 유지 확인.
   - **이모지는 최소한만**: 페이지 아이콘, 맨 위 📺 callout, ⚠ 불규칙 callout 아이콘 정도. 섹션 제목·표·본문에는 넣지 않는다.
-- **단어 목록**: 새 단어 전부를 `한글 | 뜻(영어) | 발음` 표로 (품사 열 없음). 복습 단어는 넣지 않는다.
+- **단어 선정**: 영상의 새 단어를 전부 넣지 않고, 아래 기준으로 핵심만 고른다. vocab.json에는 영상의 새 단어를 전부 기록한다 (노트는 그 일부).
+  1. **뺀다**: vocab.json 목록(3,237개)에 없는 단어 · 위치어(위, 안, 옆, 저쪽, 좌우 등) · 잇는 말(그리고, 그래서 등) · 수(하나, 둘 등) · 뜻이 뻔한 외래어나 영어권에서 이미 아는 말(커피, 마트, 카트, 프라이팬, 텀블러, 김치 등) · 고유명사(한국 등) · 복습 단어.
+  2. **레벨로 거르지 않는다**: 영상에 자연스럽게 나온 B레벨 단어도 그대로 넣는다.
+  3. **개수 상한**: Nouns 10 · Verbs+Adjectives 합쳐서 14 · Adverbs 4 · Expressions 3 (합계 약 30). 넘으면 장면의 핵심 단어 > rank 순으로 고른다.
+  4. 시간 표현(오늘, 지금, 이제)은 넣는다.
+- **Expressions**: 두 단어 이상이 한 뜻을 이루는 표현(수다를 떨다 등)은 Verbs가 아니라 Expressions 섹션에 넣는다. 활용형 표는 넣지 않는다 — 필요하면 짧은 설명 한 줄(영상에서 들린 형태 등) + 예문.
+- **단어 목록**: 고른 단어를 품사별로 나눠 각 섹션 맨 위에 `Korean | Meaning | Sound` 표로 넣는다 (품사 열 없음, 영상에 나온 순서). 명사는 Nouns 섹션의 표, 동사·형용사·부사·표현은 각 섹션 제목 바로 아래 표 → 그 아래 단어별 토글.
 - **발음**: 로마자만 쓴다 (한글 발음 표기 X). 철자가 아니라 **실제 소리** 기준, 음절은 하이픈으로 (찾다 chat-tta, 찾아요 cha-ja-yo, 많이 ma-ni).
-- **명사**: 단어 목록에만 넣고 끝.
+- **명사**: Nouns 표에만 넣고 끝 (표 외의 표현 방식은 검토 중).
 - **동사·형용사**: 단어별로
-  - 활용형 표 — "Same word, different endings" 문구 + 기본형(Dictionary form)과 활용형. 동사는 Present(-아요/어요)·Past(-았어요)·Future(-(으)ㄹ 거예요), 형용사는 Present·Past. 표 열은 `구분 | Korean | Sound`만 (뜻 열 없음 — 같은 뜻이고 시제만 다르므로). 변하지 않는 어간을 **굵게** 표시해 같은 단어임을 보여 준다.
+  - 활용형 표 — 기본형(Dictionary form)과 활용형 (표 앞에 "Same word, different endings" 같은 안내 문구는 넣지 않는다). 동사는 Present(-아요/어요)·Past(-았어요)·Future(-(으)ㄹ 거예요), 형용사는 Present·Past. 표 열은 `구분 | Korean | Sound`만 (뜻 열 없음 — 같은 뜻이고 시제만 다르므로). 변하지 않는 어간을 **굵게** 표시해 같은 단어임을 보여 준다.
   - 불규칙 활용(ㅂ, 르 등)은 ⚠ 한 줄로 어떻게 바뀌는지 설명.
-- **부사**: 형태가 변하지 않는다는 한 줄 + 예문.
+- **부사**: 예문만 (발음은 섹션 표에 있으므로 `**Sound:**` 줄 없음. "Adverbs never change their form." 같은 안내 문구도 넣지 않는다). 필요하면 쓰임 설명 한 줄.
+- **예문 정확성**: 예문 속 단어가 표에 적은 뜻으로 쓰였는지 확인한다 (예: 다 = all인데 "다 볶았어요"는 '끝까지 다 했다'는 뜻이라 맞지 않음).
 - **예문**: 동사·형용사·부사마다 2~3개. 각 예문은 한글(타깃 단어 굵게) / 로마자(이탤릭) / 영어 번역.
   - 1개는 영상 상황 안의 문장, 나머지는 영상 밖의 다른 상황. 영상 대사와 똑같다고 표시하지 않는다 (🎬 표시 X — 촬영하며 대사가 바뀔 수 있음).
   - 단어는 세션 레벨 범위까지만 (상위 레벨 단어 금지). 문법은 -아요/어요, -았어요, -(으)ㄹ 거예요, -고 싶어요, 그래서/그리고 수준으로 제한.
@@ -88,8 +99,9 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
 | `ru` | 러시아어 | `ms` | 말레이어 |
 | `vi` | 베트남어 | | |
 
-- **방법**: `sessions/captions/make_captions.py`를 참고해 같은 방식으로 만든다. 한국어 원문 문장 목록(KO, 중복 제거)과 언어별 번역 표(T[코드], KO와 같은 순서)를 두고, 원본의 타임코드·줄 구성은 그대로 둔 채 문장만 바꾼다. 원본에 번역 표에 없는 문장이 있으면 에러로 멈추게 한다.
-- **출력**: `captions.<코드>.sbv`, 원본과 같은 줄바꿈(CRLF)·UTF-8. 생성 후 언어별로 타임코드 개수·값이 원본과 일치하는지 검증한다.
+- **방법**: 이전 회차의 `sessions/S###/S###_captions/make_captions.py`를 참고해 같은 방식으로 만든다. 한국어 원문 문장 목록(KO, 중복 제거)과 언어별 번역 표(T[코드], KO와 같은 순서)를 두고, 원본의 타임코드·줄 구성은 그대로 둔 채 문장만 바꾼다. 원본에 번역 표에 없는 문장이 있으면 에러로 멈추게 한다.
+- **파일**: 사용자가 준 한국어 자막은 `sessions/S###/S###_captions/S###_captions.kr.sbv`로 저장한다.
+- **출력**: `sessions/S###/S###_captions/S###_captions.<코드>.sbv`, 원본과 같은 줄바꿈(CRLF)·UTF-8. 생성 후 언어별로 타임코드 개수·값이 원본과 일치하는지 검증한다.
 - **번역**: 기계 번역 API 없이 직접, 장면 맥락에 맞게 한다.
   - "미노 쌤"처럼 성별이 드러날 수 있는 표현은 성별 중립으로 (예: es "tu profe", de "Hier ist Mino!", ru "С вами Мино!", vi "Mình là Mino đây!"). 러시아어·프랑스어처럼 1인칭 과거형에 성별이 붙는 언어는 '우리' 주어나 성별 없는 형태로 바꾼다.
   - 층수: 지상층을 따로 세는 나라는 한국 "2층" → 1st floor (fr premier étage, de erster Stock, pt-BR primeiro andar, ms tingkat 1).
@@ -163,10 +175,10 @@ Feel free to ask me any questions in the comments. I'll reply ASAP!
 - 구현 전에 실제 저장소 구조를 먼저 확인한다. (`assets/<이모지 이름>/metadata.json`, `3D/` 폴더, 피부색 변형이 있는 이모지는 `Default/3D/` 아래에 있는 것으로 알려져 있음)
 - metadata의 이름(cldr)과 keywords로 검색 인덱스를 만들어 `.cache/emoji_index.json`에 저장한다.
 
-**단어별 아이콘 매핑: `icon_map.json`**
+**단어별 아이콘 매핑: `icons/icon_map.json`**
 - 한번 정한 아이콘은 다음 세션에서도 재사용한다 (같은 단어는 항상 같은 그림 → 스타일 통일).
-- 형식: `{"A1-N-xxx": {"word": "문", "source": "fluent" | "manual", "name": "Door", "file": "icons/A1-N-xxx_문.png", "motion": "rotate", "license": "MIT (Fluent Emoji)"}}`
-- 실제 이미지 파일은 `icons/` 폴더에 모은다.
+- 형식: `{"A1-N-xxx": {"word": "문", "source": "fluent" | "manual", "name": "Door", "file": "icons/library/A1-N-xxx_문.png", "motion": "rotate", "license": "MIT (Fluent Emoji)"}}`
+- 실제 이미지 파일은 `icons/library/` 폴더에 모은다.
 
 **명령어**
 | 명령 | 기능 |
@@ -183,7 +195,8 @@ Feel free to ask me any questions in the comments. I'll reply ASAP!
 - `fetch`가 끝나면 Claude가 검토 목록을 직접 보고, 뜻에 맞는 후보를 `set`으로 확정한다.
   예: '배'는 stomach/ship/pear 중 영상 상황에 맞는 것을 고른다.
 
-**fetch 결과물: `sessions/S###/S###_assets/`** (세션 폴더가 없으면 `sessions/S###_assets/`)
+**fetch 결과물: `sessions/S###/S###_assets/`** (세션 폴더가 없으면 만든다)
+- ⚠ fetch는 이 폴더의 번호 붙은 파일(`01_…`)과 `report.md`를 새로 만든다. 직접 넣은 사진이나 손으로 고친 report가 있는 회차(예: S003)에는 다시 실행하기 전에 확인한다.
 - 세션 단어의 아이콘 파일 복사본: `01_문.png`, `02_열다.png` … (세션 파일의 단어 순서대로 번호)
 - `report.md`:
   - 단어 / 아이콘 / 출처 / 추천 모션 표

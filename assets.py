@@ -1,10 +1,12 @@
 """세션 단어 아이콘 에셋 관리.
 
 명사는 정지 아이콘, 동사·형용사는 편집기에서 키프레임 모션을 줄 아이콘을 모은다.
-메인 스타일은 Microsoft Fluent Emoji 3D (MIT). 한번 정한 아이콘은 icon_map.json에 저장해 재사용한다.
+메인 스타일은 Microsoft Fluent Emoji 3D (MIT). 한번 정한 아이콘은 icons/icon_map.json에 저장해 재사용한다
+(원본 이미지는 icons/library/).
 
 사용법:
-  python assets.py fetch S002                     # 세션 단어에 아이콘 배정 + sessions/.../S002_assets/ 생성
+  python assets.py fetch S002                     # 세션 단어에 아이콘 배정 + sessions/S002/S002_assets/ 생성
+  python assets.py fetch S002 --offline           # 검색 없이 icon_map에 있는 아이콘만 복사
   python assets.py candidates A2-N-075             # 자동 매칭 후보 상위 5개
   python assets.py set A2-N-260 --emoji "Kitchen knife" [--motion pop]
   python assets.py set A2-N-075 --file 받은파일.png --license "Flaticon (출처 표기 필요)"
@@ -23,8 +25,8 @@ ROOT = Path(__file__).resolve().parent
 CACHE = ROOT / ".cache"
 REPO = CACHE / "fluentui-emoji"
 INDEX = CACHE / "emoji_index.json"
-ICON_MAP = ROOT / "icon_map.json"
-ICONS = ROOT / "icons"
+ICON_MAP = ROOT / "icons" / "icon_map.json"
+ICONS = ROOT / "icons" / "library"
 VOCAB = ROOT / "vocab.json"
 SESSIONS = ROOT / "sessions"
 
@@ -157,7 +159,7 @@ def candidates(index, meaning, n=5):
 
 # ---------- icon_map ----------
 def icon_file(eid, word, src):
-    ICONS.mkdir(exist_ok=True)
+    ICONS.mkdir(parents=True, exist_ok=True)
     dst = ICONS / f"{eid}_{word}{Path(src).suffix.lower()}"
     shutil.copyfile(src, dst)
     return dst.relative_to(ROOT).as_posix()
@@ -180,8 +182,7 @@ def session_words(doc, sid):
 
 
 def session_out_dir(sid):
-    folder = SESSIONS / sid
-    return (folder / f"{sid}_assets") if folder.is_dir() else (SESSIONS / f"{sid}_assets")
+    return SESSIONS / sid / f"{sid}_assets"
 
 
 def is_abstract(entry):
@@ -197,7 +198,7 @@ def search_links(term):
 
 def cmd_fetch(a):
     doc, vidx = vocab_index()
-    index = load_index()
+    index = None
     imap = load_json(ICON_MAP, {})
     sess, words = session_words(doc, a.session_id)
 
@@ -205,6 +206,11 @@ def cmd_fetch(a):
     for eid, kind in words:
         e = vidx[eid]
         if eid not in imap:
+            if a.offline:  # 검색 없이 icon_map에 있는 것만 복사
+                missing.append(e)
+                rows.append((e, kind, None))
+                continue
+            index = index if index is not None else load_index()
             cands = candidates(index, e["meaning"])
             if cands and cands[0][0] >= AUTO_SCORE:
                 assign_emoji(imap, e, cands[0][2])
@@ -296,6 +302,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = p.add_subparsers(dest="cmd", required=True)
     f = sp.add_parser("fetch"); f.add_argument("session_id")
+    f.add_argument("--offline", action="store_true", help="검색 없이 icon_map에 있는 아이콘만 복사")
     c = sp.add_parser("candidates"); c.add_argument("id")
     s = sp.add_parser("set"); s.add_argument("id")
     g = s.add_mutually_exclusive_group(required=True)

@@ -1,0 +1,898 @@
+{
+  "A1-N-105": {
+    "word": "가격",
+    "source": "fluent",
+    "name": "Label",
+    "file": "icons/library/A1-N-105_가격.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-043": {
+    "word": "걷다",
+    "source": "fluent",
+    "name": "Person walking",
+    "file": "icons/library/A1-V-043_걷다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-087": {
+    "word": "계란",
+    "source": "fluent",
+    "name": "Egg",
+    "file": "icons/library/A2-N-087_계란.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-051": {
+    "word": "계산하다",
+    "source": "fluent",
+    "name": "Credit card",
+    "file": "icons/library/A2-V-051_계산하다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-099": {
+    "word": "고기",
+    "source": "fluent",
+    "name": "Cut of meat",
+    "file": "icons/library/A1-N-099_고기.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-013": {
+    "word": "고르다",
+    "source": "fluent",
+    "name": "Thinking face",
+    "file": "icons/library/A2-V-013_고르다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-097": {
+    "word": "과일",
+    "source": "manual",
+    "name": "Fruit basket (Fluent 합성)",
+    "file": "icons/library/A1-N-097_과일.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작, 출처 표기 불필요)"
+  },
+  "A1-N-180": {
+    "word": "과자",
+    "source": "fluent",
+    "name": "Cookie",
+    "file": "icons/library/A1-N-180_과자.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-090": {
+    "word": "담다",
+    "source": "fluent",
+    "name": "Basket",
+    "file": "icons/library/A2-V-090_담다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-242": {
+    "word": "돼지고기",
+    "source": "fluent",
+    "name": "Pig face",
+    "file": "icons/library/A2-N-242_돼지고기.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-068": {
+    "word": "마트",
+    "source": "fluent",
+    "name": "Convenience store",
+    "file": "icons/library/A1-N-068_마트.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-226": {
+    "word": "만두",
+    "source": "fluent",
+    "name": "Dumpling",
+    "file": "icons/library/A2-N-226_만두.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-002": {
+    "word": "많다",
+    "source": "manual",
+    "name": "Apple pyramid (Fluent 합성)",
+    "file": "icons/library/A1-ADJ-002_많다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji 기반 자체 제작, 출처 표기 불필요)"
+  },
+  "A1-ADJ-008": {
+    "word": "맛있다",
+    "source": "fluent",
+    "name": "Drooling face",
+    "file": "icons/library/A1-ADJ-008_맛있다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-169": {
+    "word": "맥주",
+    "source": "fluent",
+    "name": "Beer mug",
+    "file": "icons/library/A1-N-169_맥주.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADJ-027": {
+    "word": "맵다",
+    "source": "fluent",
+    "name": "Hot pepper",
+    "file": "icons/library/A2-ADJ-027_맵다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADV-015": {
+    "word": "먼저",
+    "source": "fluent",
+    "name": "Keycap 1",
+    "file": "icons/library/A1-ADV-015_먼저.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADJ-033": {
+    "word": "무겁다",
+    "source": "fluent",
+    "name": "Person lifting weights",
+    "file": "icons/library/A2-ADJ-033_무겁다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-183": {
+    "word": "바나나",
+    "source": "fluent",
+    "name": "Banana",
+    "file": "icons/library/A1-N-183_바나나.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-015": {
+    "word": "밥",
+    "source": "fluent",
+    "name": "Cooked rice",
+    "file": "icons/library/A1-N-015_밥.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-098": {
+    "word": "봉투",
+    "source": "fluent",
+    "name": "Shopping bags",
+    "file": "icons/library/A2-N-098_봉투.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-014": {
+    "word": "비싸다",
+    "source": "fluent",
+    "name": "Money bag",
+    "file": "icons/library/A1-ADJ-014_비싸다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-098": {
+    "word": "사과",
+    "source": "fluent",
+    "name": "Red apple",
+    "file": "icons/library/A1-N-098_사과.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-015": {
+    "word": "사다",
+    "source": "fluent",
+    "name": "Money with wings",
+    "file": "icons/library/A1-V-015_사다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-198": {
+    "word": "세일",
+    "source": "manual",
+    "name": "Sale tag (Fluent 합성)",
+    "file": "icons/library/A2-N-198_세일.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작, 출처 표기 불필요)"
+  },
+  "A2-N-243": {
+    "word": "소고기",
+    "source": "fluent",
+    "name": "Cow face",
+    "file": "icons/library/A2-N-243_소고기.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-015": {
+    "word": "싸다",
+    "source": "fluent",
+    "name": "Coin",
+    "file": "icons/library/A1-ADJ-015_싸다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-233": {
+    "word": "양파",
+    "source": "fluent",
+    "name": "Onion",
+    "file": "icons/library/A2-N-233_양파.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-097": {
+    "word": "영수증",
+    "source": "fluent",
+    "name": "Receipt",
+    "file": "icons/library/A2-N-097_영수증.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-228": {
+    "word": "요리",
+    "source": "fluent",
+    "name": "Pot of food",
+    "file": "icons/library/A1-N-228_요리.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-102": {
+    "word": "우유",
+    "source": "fluent",
+    "name": "Glass of milk",
+    "file": "icons/library/A1-N-102_우유.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-254": {
+    "word": "음료수",
+    "source": "fluent",
+    "name": "Cup with straw",
+    "file": "icons/library/A2-N-254_음료수.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADV-010": {
+    "word": "조금",
+    "source": "fluent",
+    "name": "Pinching hand",
+    "file": "icons/library/A1-ADV-010_조금.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-031": {
+    "word": "좋아하다",
+    "source": "fluent",
+    "name": "Red heart",
+    "file": "icons/library/A1-V-031_좋아하다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-004": {
+    "word": "집",
+    "source": "fluent",
+    "name": "House",
+    "file": "icons/library/A1-N-004_집.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-044": {
+    "word": "찾다",
+    "source": "fluent",
+    "name": "Magnifying glass tilted left",
+    "file": "icons/library/A1-V-044_찾다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-085": {
+    "word": "채소",
+    "source": "fluent",
+    "name": "Leafy green",
+    "file": "icons/library/A2-N-085_채소.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-017": {
+    "word": "춥다",
+    "source": "fluent",
+    "name": "Cold face",
+    "file": "icons/library/A1-ADJ-017_춥다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-095": {
+    "word": "카드",
+    "source": "manual",
+    "name": "Card front (make_card.py)",
+    "file": "icons/library/A2-N-095_카드.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작, 출처 표기 불필요)"
+  },
+  "A2-N-195": {
+    "word": "카트",
+    "source": "fluent",
+    "name": "Shopping cart",
+    "file": "icons/library/A2-N-195_카트.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADJ-007": {
+    "word": "필요하다",
+    "source": "fluent",
+    "name": "Red exclamation mark",
+    "file": "icons/library/A2-ADJ-007_필요하다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-277": {
+    "word": "불",
+    "source": "fluent",
+    "name": "Fire",
+    "file": "icons/library/A2-N-277_불.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-083": {
+    "word": "숟가락",
+    "source": "fluent",
+    "name": "Spoon",
+    "file": "icons/library/A2-N-083_숟가락.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-088": {
+    "word": "소금",
+    "source": "fluent",
+    "name": "Salt",
+    "file": "icons/library/A2-N-088_소금.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-010": {
+    "word": "물",
+    "source": "fluent",
+    "name": "Droplet",
+    "file": "icons/library/A1-N-010_물.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-260": {
+    "word": "칼",
+    "source": "fluent",
+    "name": "Kitchen knife",
+    "file": "icons/library/A2-N-260_칼.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-259": {
+    "word": "프라이팬",
+    "source": "fluent",
+    "name": "Cooking",
+    "file": "icons/library/A2-N-259_프라이팬.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-080": {
+    "word": "그릇",
+    "source": "fluent",
+    "name": "Bowl with spoon",
+    "file": "icons/library/A2-N-080_그릇.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-263": {
+    "word": "싱크대",
+    "source": "fluent",
+    "name": "Potable water",
+    "file": "icons/library/A2-N-263_싱크대.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "B1-N-114": {
+    "word": "냄새",
+    "source": "fluent",
+    "name": "Nose",
+    "file": "icons/library/B1-N-114_냄새.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "B1-N-113": {
+    "word": "맛",
+    "source": "fluent",
+    "name": "Tongue",
+    "file": "icons/library/B1-N-113_맛.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-003": {
+    "word": "만들다",
+    "source": "fluent",
+    "name": "Cook",
+    "file": "icons/library/A2-V-003_만들다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-040": {
+    "word": "닫다",
+    "source": "fluent",
+    "name": "Door",
+    "file": "icons/library/A1-V-040_닫다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-042": {
+    "word": "꺼내다",
+    "source": "manual",
+    "name": "Basket + Pinching hand + Red apple",
+    "file": "icons/library/A2-V-042_꺼내다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-041": {
+    "word": "넣다",
+    "source": "fluent",
+    "name": "Inbox tray",
+    "file": "icons/library/A2-V-041_넣다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-108": {
+    "word": "따르다",
+    "source": "fluent",
+    "name": "Pouring liquid",
+    "file": "icons/library/A2-V-108_따르다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-010": {
+    "word": "마시다",
+    "source": "fluent",
+    "name": "Bubble tea",
+    "file": "icons/library/A1-V-010_마시다.png",
+    "motion": "shrink",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-040": {
+    "word": "자르다",
+    "source": "fluent",
+    "name": "Scissors",
+    "file": "icons/library/A2-V-040_자르다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-095": {
+    "word": "볶다",
+    "source": "fluent",
+    "name": "Shallow pan of food",
+    "file": "icons/library/A2-V-095_볶다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-101": {
+    "word": "맛보다",
+    "source": "fluent",
+    "name": "Face savoring food",
+    "file": "icons/library/A2-V-101_맛보다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-009": {
+    "word": "먹다",
+    "source": "fluent",
+    "name": "Fork and knife with plate",
+    "file": "icons/library/A1-V-009_먹다.png",
+    "motion": "shrink",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-043": {
+    "word": "켜다",
+    "source": "fluent",
+    "name": "Light bulb",
+    "file": "icons/library/A2-V-043_켜다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-080": {
+    "word": "닦다",
+    "source": "fluent",
+    "name": "Sponge",
+    "file": "icons/library/A1-V-080_닦다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-019": {
+    "word": "차갑다",
+    "source": "fluent",
+    "name": "Ice",
+    "file": "icons/library/A1-ADJ-019_차갑다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-018": {
+    "word": "뜨겁다",
+    "source": "manual",
+    "name": "Hot beverage + steam curves",
+    "file": "icons/library/A1-ADJ-018_뜨겁다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-ADJ-030": {
+    "word": "싱겁다",
+    "source": "fluent",
+    "name": "Face with diagonal mouth",
+    "file": "icons/library/A2-ADJ-030_싱겁다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADJ-054": {
+    "word": "배부르다",
+    "source": "fluent",
+    "name": "Face exhaling",
+    "file": "icons/library/A1-ADJ-054_배부르다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADJ-011": {
+    "word": "깨끗하다",
+    "source": "fluent",
+    "name": "Sparkles",
+    "file": "icons/library/A2-ADJ-011_깨끗하다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADV-004": {
+    "word": "잘",
+    "source": "fluent",
+    "name": "Thumbs up",
+    "file": "icons/library/A1-ADV-004_잘.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADV-013": {
+    "word": "다시",
+    "source": "fluent",
+    "name": "Repeat button",
+    "file": "icons/library/A1-ADV-013_다시.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADV-024": {
+    "word": "잠깐",
+    "source": "fluent",
+    "name": "Hourglass not done",
+    "file": "icons/library/A2-ADV-024_잠깐.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADV-056": {
+    "word": "깨끗이",
+    "source": "fluent",
+    "name": "Sparkles",
+    "file": "icons/library/A2-ADV-056_깨끗이.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADV-052": {
+    "word": "조금씩",
+    "source": "abstract",
+    "name": "",
+    "file": "",
+    "motion": "none",
+    "license": ""
+  },
+  "A2-N-075": {
+    "word": "냉장고",
+    "source": "manual",
+    "name": "Refrigerator (직접 그림)",
+    "file": "icons/library/A2-N-075_냉장고.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-N-261": {
+    "word": "도마",
+    "source": "manual",
+    "name": "Cutting board (직접 그림)",
+    "file": "icons/library/A2-N-261_도마.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-N-235": {
+    "word": "파",
+    "source": "manual",
+    "name": "Green onion (직접 그림)",
+    "file": "icons/library/A2-N-235_파.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-N-070": {
+    "word": "부엌",
+    "source": "manual",
+    "name": "House + Cooking",
+    "file": "icons/library/A2-N-070_부엌.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-100": {
+    "word": "김치",
+    "source": "manual",
+    "name": "Leafy green(red) + Hot pepper",
+    "file": "icons/library/A1-N-100_김치.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-N-250": {
+    "word": "기름",
+    "source": "manual",
+    "name": "Droplet(gold) + Olive",
+    "file": "icons/library/A2-N-250_기름.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-N-082": {
+    "word": "컵",
+    "source": "manual",
+    "name": "Glass of milk(water)",
+    "file": "icons/library/A2-N-082_컵.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "B1-N-110": {
+    "word": "재료",
+    "source": "manual",
+    "name": "Carrot + Onion + Egg",
+    "file": "icons/library/B1-N-110_재료.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "B1-N-331": {
+    "word": "뚜껑",
+    "source": "manual",
+    "name": "Jar (lid open)",
+    "file": "icons/library/B1-N-331_뚜껑.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-039": {
+    "word": "열다",
+    "source": "manual",
+    "name": "Door (open)",
+    "file": "icons/library/A1-V-039_열다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-038": {
+    "word": "씻다",
+    "source": "manual",
+    "name": "Raised hand + Bubbles",
+    "file": "icons/library/A1-V-038_씻다.png",
+    "motion": "fade",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-100": {
+    "word": "썰다",
+    "source": "manual",
+    "name": "Onion + Kitchen knife",
+    "file": "icons/library/A2-V-100_썰다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-094": {
+    "word": "섞다",
+    "source": "manual",
+    "name": "Bowl with spoon + Cyclone",
+    "file": "icons/library/A2-V-094_섞다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-044": {
+    "word": "끄다",
+    "source": "manual",
+    "name": "Light bulb (off)",
+    "file": "icons/library/A2-V-044_끄다.png",
+    "motion": "shrink",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-037": {
+    "word": "설거지하다",
+    "source": "manual",
+    "name": "Bowl + Sponge + Bubbles",
+    "file": "icons/library/A2-V-037_설거지하다.png",
+    "motion": "fade",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-ADJ-028": {
+    "word": "짜다",
+    "source": "manual",
+    "name": "Squinting face + Salt",
+    "file": "icons/library/A2-ADJ-028_짜다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-ADJ-031": {
+    "word": "배고프다",
+    "source": "manual",
+    "name": "Pleading face + Fork and knife",
+    "file": "icons/library/A1-ADJ-031_배고프다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-ADJ-040": {
+    "word": "목마르다",
+    "source": "manual",
+    "name": "Pleading face + Droplet",
+    "file": "icons/library/A2-ADJ-040_목마르다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-048": {
+    "word": "요리하다",
+    "source": "fluent",
+    "name": "Cook",
+    "file": "icons/library/A1-V-048_요리하다.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-086": {
+    "word": "날씨",
+    "source": "fluent",
+    "name": "Sun behind small cloud",
+    "file": "icons/library/A1-N-086_날씨.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-054": {
+    "word": "산",
+    "source": "fluent",
+    "name": "Mountain",
+    "file": "icons/library/A2-N-054_산.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-053": {
+    "word": "바람",
+    "source": "fluent",
+    "name": "Wind face",
+    "file": "icons/library/A2-N-053_바람.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-057": {
+    "word": "운동",
+    "source": "fluent",
+    "name": "Person running",
+    "file": "icons/library/A1-N-057_운동.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "B1-N-383": {
+    "word": "방향",
+    "source": "fluent",
+    "name": "Compass",
+    "file": "icons/library/B1-N-383_방향.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-270": {
+    "word": "계단",
+    "source": "manual",
+    "name": "Stairs (직접 그림)",
+    "file": "icons/library/A2-N-270_계단.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-101": {
+    "word": "커피",
+    "source": "fluent",
+    "name": "Hot beverage",
+    "file": "icons/library/A1-N-101_커피.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-047": {
+    "word": "가방",
+    "source": "fluent",
+    "name": "Backpack",
+    "file": "icons/library/A1-N-047_가방.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-074": {
+    "word": "길",
+    "source": "fluent",
+    "name": "Motorway",
+    "file": "icons/library/A1-N-074_길.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-089": {
+    "word": "손",
+    "source": "fluent",
+    "name": "Raised hand",
+    "file": "icons/library/A1-N-089_손.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-112": {
+    "word": "지도",
+    "source": "fluent",
+    "name": "World map",
+    "file": "icons/library/A2-N-112_지도.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "B1-N-384": {
+    "word": "위치",
+    "source": "fluent",
+    "name": "Round pushpin",
+    "file": "icons/library/B1-N-384_위치.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "B1-N-164": {
+    "word": "소원",
+    "source": "manual",
+    "name": "Folded hands + Sparkles",
+    "file": "icons/library/B1-N-164_소원.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-001": {
+    "word": "사람",
+    "source": "fluent",
+    "name": "Person",
+    "file": "icons/library/A1-N-001_사람.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-190": {
+    "word": "아저씨",
+    "source": "fluent",
+    "name": "Man beard",
+    "file": "icons/library/A1-N-190_아저씨.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-230": {
+    "word": "꽃",
+    "source": "fluent",
+    "name": "Blossom",
+    "file": "icons/library/A1-N-230_꽃.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-107": {
+    "word": "고양이",
+    "source": "fluent",
+    "name": "Cat",
+    "file": "icons/library/A1-N-107_고양이.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-088": {
+    "word": "눈",
+    "source": "fluent",
+    "name": "Eye",
+    "file": "icons/library/A1-N-088_눈.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-006": {
+    "word": "가다",
+    "source": "manual",
+    "name": "Person walking + Dashing away",
+    "file": "icons/library/A1-V-006_가다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-ADJ-037": {
+    "word": "힘들다",
+    "source": "manual",
+    "name": "Weary face + Sweat droplets",
+    "file": "icons/library/A1-ADJ-037_힘들다.png",
+    "motion": "shake",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  }
+}

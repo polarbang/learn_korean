@@ -6,5 +6,5 @@
 ```
 pip install -r requirements.txt
 ```
-- Python 3, git 필요. `python assets.py fetch S###`를 처음 실행하면 Fluent Emoji 저장소를 `.cache/`에 받아 검색 인덱스를 만든다 (`assets/icons/make_icons.py`도 이 캐시를 쓴다).
-- `assets/common/mov/`(CapCut용 MOV, 약 190MB)는 저장소에 없다. 새 기기에서 `python assets/common/make_overlays.py`를 실행하면 같은 파일이 만들어진다 (ffmpeg는 imageio-ffmpeg에 포함).
+- Python 3, git 필요. `python assets.py fetch S###`를 처음 실행하면 Fluent Emoji 저장소를 `.cache/`에 받아 검색 인덱스를 만든다 (`icons/make_icons.py`도 이 캐시를 쓴다).
+- `common_assets/mov/`(CapCut용 MOV, 약 190MB)는 저장소에 없다. 새 기기에서 `python common_assets/make_overlays.py`를 실행하면 같은 파일이 만들어진다 (ffmpeg는 imageio-ffmpeg에 포함).
