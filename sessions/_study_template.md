@@ -7,13 +7,13 @@ Video: (link)
 - Korean verbs and adjectives change their ending, but they are **still the same word**.
   The **bold part** stays the same — only the ending changes.
 
-## Nouns
+## 명사 (Nouns)
 
 | Korean | Meaning | Sound |
 |---|---|---|
 |  |  |  |
 
-## Verbs
+## 동사 (Verbs)
 
 | Korean | Meaning | Sound |
 |---|---|---|
@@ -38,7 +38,7 @@ Video: (link)
    *romanization*
    → English
 
-## Adjectives
+## 형용사 (Adjectives)
 
 | Korean | Meaning | Sound |
 |---|---|---|
@@ -46,7 +46,7 @@ Video: (link)
 
 (same format as verbs — Dictionary form / Present / Past)
 
-## Adverbs
+## 부사 (Adverbs)
 
 | Korean | Meaning | Sound |
 |---|---|---|
@@ -57,7 +57,7 @@ Video: (link)
 **Examples**
 1. …
 
-## Expressions
+## 표현 (Expressions)
 (only when the video has a multi-word expression)
 
 | Korean | Meaning | Sound |
@@ -71,7 +71,7 @@ Video: (link)
 **Examples**
 1. …
 
-## Grammar Point: (pattern) (meaning)
+## 문법 (Grammar): (pattern) (meaning)
 
 (one or two lines: what it does and where it goes)
 

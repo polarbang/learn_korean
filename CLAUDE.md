@@ -6,9 +6,10 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
 ## 파일 구성
 - `vocab.json` — 전체 어휘 3,237개. 레벨 → 품사 → 미사용/사용 구조. **직접 편집하지 말고 `vocab.py`로만 상태를 바꾼다.**
 - `vocab.py` — 어휘 상태 관리 스크립트
+- `upload_captions.py` — 회차 자막을 유튜브 영상에 한꺼번에 업로드 (아래 '유튜브 자막 업로드')
 - **원칙**: 여러 회차에서 다시 쓰는 것은 `common_assets/`(강조 에셋)·`icons/`(단어 아이콘 원본), 한 회차에만 쓰는 것은 `sessions/S###/`에 둔다.
 - `sessions/S###/` — 회차 하나의 재료를 모두 모은 폴더
-  - `S###_상황.md` (세션 대본) · `S###_상황_학습.md` (학습 자료) · `S###_captions/` (자막 — 한국어 원본 `S###_captions.kr.sbv`, 번역 `S###_captions.<코드>.sbv`, 생성기 `make_captions.py`) · `S###_description.txt` · `S###_pinned_comment.txt` · `S###_assets/` (그 회차 아이콘 복사본 + `report.md`)
+  - `S###_상황.md` (세션 대본) · `S###_상황_학습.md` (학습 자료) · `S###_captions/` (자막 — 한국어 원본 `S###_captions.kr.sbv`, 번역 `S###_captions.<코드>.sbv`, 생성기 `make_captions.py`) · `S###_video_id.txt` (유튜브 영상 ID) · `S###_description.txt` · `S###_pinned_comment.txt` · `S###_assets/` (그 회차 아이콘 복사본 + `report.md`)
 - `sessions/_template.md` — 세션 파일 양식 · `sessions/_study_template.md` — 학습 자료 양식
 - `common_assets/` — 모든 영상에서 쓰는 공용 강조 에셋 (동그라미·원·네모·밑줄·화살표·체크·엑스·가리키는 손·숫자 1~9). `mov/`(CapCut용, git에 없음 — 생성기로 다시 만듦) · `png/` · 생성기 `make_overlays.py` · 원본 `_src/` · 설명 `README.md`
 - `icons/` — 단어 아이콘 (아래 '아이콘 에셋 자동화'). 관리 스크립트는 루트의 `assets.py`
@@ -57,11 +58,12 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
   - 맨 위에 📺 callout: 어느 유튜브 영상의 학습 자료인지 + 영상 링크 자리.
   - 표는 Notion `<table>` 태그로, 예문의 로마자·번역 줄은 탭 들여쓰기(번호 목록의 하위 줄), ⚠ 불규칙 설명은 노란 callout.
   - **레이아웃**: 섹션 순서는 How to read → Nouns → Verbs → Adjectives → Adverbs → Expressions → Grammar Point. 해당 단어가 없는 섹션은 만들지 않는다 (Expressions는 표현이 있을 때만).
+    - 섹션 제목은 한국어 먼저, 영어는 괄호: `명사 (Nouns)` · `동사 (Verbs)` · `형용사 (Adjectives)` · `부사 (Adverbs)` · `표현 (Expressions)` · `문법 (Grammar): <문형> (<뜻>)`. How to read this page만 영어 그대로 (처음 읽는 안내라 한글을 못 읽어도 이해되게).
     - 섹션 제목(H2)에 번호를 붙이지 않고 색 배경으로 구분한다 (How to read gray · Nouns blue · Verbs green · Adjectives yellow · Adverbs orange · Expressions pink · Grammar purple). `---` 구분선은 쓰지 않는다.
     - 목차(`<table_of_contents/>`)는 넣지 않는다 (토글 제목까지 단어가 전부 나열되어 너저분함).
     - 영상 타임스탬프(장면 링크)는 넣지 않는다.
     - 동사·형용사·부사·표현의 각 단어는 토글 제목(`### 사다 {toggle="true"}` — 제목에는 단어만. 뜻·발음은 섹션 맨 위 표에 있으므로 넣지 않음)으로, 내용은 탭 들여쓰기해서 접히게.
-    - How to read this page 마지막 항목에 토글 안내를 넣는다: "In **Verbs**, **Adjectives** and **Adverbs**, each word is folded. Tap the word (▸) to open it and see its forms and example sentences." Expressions 섹션이 있으면 "In **Verbs**, **Adjectives**, **Adverbs** and **Expressions**, …". (Notion 전용 — md 파일에는 토글이 없으므로 넣지 않음)
+    - How to read this page 마지막 항목에 토글 안내를 넣는다: "In **동사 (Verbs)**, **형용사 (Adjectives)** and **부사 (Adverbs)**, each word is folded. Tap the word (▸) to open it and see its forms and example sentences." 표현 섹션이 있으면 "In **동사 (Verbs)**, **형용사 (Adjectives)**, **부사 (Adverbs)** and **표현 (Expressions)**, …". (Notion 전용 — md 파일에는 토글이 없으므로 넣지 않음)
     - Grammar Point는 제목(H2)에만 보라색 배경을 주고, 내용은 callout 없이 일반 본문으로 쓴다 (callout은 기본색도 배경이 깔림).
   - Notion 마크다운 주의: `[ ]`는 `\[ \]`로 이스케이프, 빈칸은 `___` 대신 전각 `＿＿` (밑줄이 굵게/기울임으로 바뀜).
   - 토글 제목을 고칠 때는 `update_content`의 old_str/new_str에 ` {toggle="true"}`까지 꼭 포함한다. 제목 글자만 바꾸면 토글이 풀리고 안의 내용이 밖으로 빠져나온다. 수정 후 fetch로 토글 유지 확인.
@@ -108,6 +110,17 @@ CEFR A1부터 B2까지 난이도를 점진적으로 올리며, 상황별 세션�
   - 한국 음식 이름(라면·만두·김치)은 영어·유럽어에서 ramyeon/mandu 등 한국어 이름을 살리고, 필요하면 괄호로 현지 설명.
   - 문장이 단계적으로 완성되는 자막(예: "소고기는… → 소고기는 돼지고기보다… → …비싸요")은 번역도 같은 흐름이 되게.
 - 원어민 검수 전 번역이라는 점을 사용자에게 알린다.
+
+### 유튜브 자막 업로드 (`upload_captions.py`)
+사용자가 영상을 **비공개로 먼저 올리고** URL을 주면, 그 회차 자막 전부(한국어 포함 14개)를 한 번에 올린다.
+```
+python upload_captions.py S004 --video https://youtu.be/XXXXXXXXXXX
+```
+- 영상 ID는 `sessions/S###/S###_video_id.txt`에 저장돼 다음부터는 `--video` 없이 실행된다. 번역을 고친 뒤 다시 실행하면 같은 언어 트랙을 덮어쓴다.
+- 먼저 `--dry-run`으로 대상 언어를 확인한다. 일부 언어만 올리려면 `--only en ja`.
+- 할당량: 하루 10,000 기본, 14개 언어 한 번에 약 5,700 → 하루 영상 1편. 할당량이 다 되면 다음 날 `--only`로 남은 언어만 올린다.
+- 인증: 루트의 `client_secret.json`(git 제외)과 `.cache/youtube_token.json`. OAuth 앱이 테스트 상태라 7일마다 브라우저 로그인이 다시 필요하다 — 로그인 창이 뜨면 사용자에게 알린다.
+- 유튜브 언어 코드: 파일 이름의 `kr`은 업로드 때 `ko`로 바꾼다 (나머지는 파일 이름 코드 그대로).
 
 ## 유튜브 설명글 규칙
 사용자가 영상 설명글을 요청하면 아래 형식으로 짧게 쓴다 (영어). 결과물은 `sessions/S###/S###_description.txt`.
