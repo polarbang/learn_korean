@@ -511,7 +511,64 @@ def dumbbell():
     return done(im.rotate(-14, Image.BICUBIC))
 
 
+def towel():
+    """수건: 반으로 접은 하늘색 수건 + 아래쪽 흰 줄무늬 2개."""
+    im = big()
+    body = (44, 46, 212, 226)
+    shadow(im, s(*body), 18 * SS, dy=6, blur=8)
+    layer, mask = grad_shape(im.size, s(*body), (150, 206, 246), (78, 150, 222), 18 * SS, vertical=False)
+    im.alpha_composite(layer)
+    highlight(im, mask, s(44, 46, 100, 226), alpha=80, blur=6)
+    d = ImageDraw.Draw(im)
+    # 접힌 윗단 (조금 더 밝고 둥글게)
+    fold, fmask = grad_shape(im.size, s(40, 30, 216, 78), (186, 226, 252), (110, 176, 236), 20 * SS, vertical=False)
+    im.alpha_composite(fold)
+    highlight(im, fmask, s(40, 30, 216, 48), alpha=90, blur=3)
+    d.line(s(48, 80, 208, 80), fill=(60, 120, 190, 150), width=3 * SS)
+    for y in (170, 190):
+        d.rounded_rectangle(s(44, y, 212, y + 9), 2 * SS, fill=(250, 252, 255, 235))
+    # 아래 올 (술)
+    for x in range(56, 204, 12):
+        d.line(s(x, 226, x, 236), fill=(110, 170, 228, 255), width=3 * SS)
+    return done(im)
+
+
+def toothpaste():
+    """치약: 비스듬한 튜브 (흰 몸통 + 파란 띠 + 파란 뚜껑, 왼쪽 끝은 납작하게 눌림)."""
+    im = big()
+    shadow(im, s(26, 104, 230, 168), 26 * SS, dy=6, blur=8)
+    # 몸통
+    layer, mask = grad_shape(im.size, s(52, 96, 196, 168), (255, 255, 255), (206, 216, 236), 26 * SS)
+    im.alpha_composite(layer)
+    highlight(im, mask, s(52, 96, 196, 116), alpha=120, blur=3)
+    d = ImageDraw.Draw(im)
+    # 눌린 끝 (주름)
+    end, _ = grad_shape(im.size, s(22, 92, 62, 172), (236, 240, 250), (190, 200, 224), 4 * SS, vertical=False)
+    im.alpha_composite(end)
+    for x in (30, 40, 50):
+        d.line(s(x, 96, x, 168), fill=(170, 182, 210, 255), width=2 * SS)
+    # 파란 띠 + 빨간 줄
+    d.rounded_rectangle(s(96, 100, 150, 164), 4 * SS, fill=(48, 120, 220, 255))
+    d.rounded_rectangle(s(104, 126, 142, 138), 4 * SS, fill=(240, 70, 70, 255))
+    # 어깨 + 뚜껑
+    sh, _ = grad_shape(im.size, s(190, 108, 212, 156), (232, 238, 250), (176, 188, 214), 8 * SS)
+    im.alpha_composite(sh)
+    cap, cmask = grad_shape(im.size, s(208, 112, 240, 152), (90, 160, 250), (30, 90, 200), 6 * SS)
+    im.alpha_composite(cap)
+    highlight(im, cmask, s(208, 112, 240, 122), alpha=100, blur=2)
+    for y in (120, 128, 136, 144):
+        d.line(s(214, y, 236, y), fill=(20, 70, 170, 160), width=SS)
+    return done(im.rotate(18, Image.BICUBIC, center=s(128, 132)))
+
+
 RECIPES = {
+    "수건": towel,
+    "치약": toothpaste,
+    "들어가다": lambda: put(put(canvas(), emoji("Door", 0.9), 160, 128), emoji("Person walking facing right", 0.7), 78, 150),
+    "세수하다": lambda: put(put(put(canvas(), emoji("Relieved face", 0.8), 112, 140), emoji("Bubbles", 0.46), 200, 62), emoji("Droplet", 0.34), 206, 196),
+    "받다": lambda: put(put(canvas(), emoji("Palms up together", 0.82), 128, 168), emoji("Droplet", 0.42), 128, 60),
+    "마르다": lambda: put(put(canvas(), emoji("T-shirt", 0.78), 112, 148), emoji("Sun", 0.5), 196, 64),
+    "감다": lambda: put(put(put(canvas(), emoji("Person blonde hair", 0.84), 120, 146), emoji("Bubbles", 0.46), 70, 46), emoji("Bubbles", 0.36), 186, 36),
     "표지판": signpost,
     "계단": stairs,
     "텀블러": tumbler,

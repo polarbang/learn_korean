@@ -31,7 +31,7 @@ Video: (link)
 (⚠ irregular: one-line note on how the spelling changes)
 
 **Examples**
-1. (sentence in the video's situation, target word in **bold**)
+1. (video line or a scene example using the same meaning and construction, target word in **bold**)
    *romanization*
    → English
 2. (sentence in another situation)

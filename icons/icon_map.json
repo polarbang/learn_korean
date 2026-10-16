@@ -894,5 +894,237 @@
     "file": "icons/library/A1-ADJ-037_힘들다.png",
     "motion": "shake",
     "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-069": {
+    "word": "화장실",
+    "source": "fluent",
+    "name": "Restroom",
+    "file": "icons/library/A1-N-069_화장실.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-208": {
+    "word": "비누",
+    "source": "fluent",
+    "name": "Soap",
+    "file": "icons/library/A1-N-208_비누.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-210": {
+    "word": "칫솔",
+    "source": "fluent",
+    "name": "Toothbrush",
+    "file": "icons/library/A1-N-210_칫솔.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-067": {
+    "word": "입",
+    "source": "fluent",
+    "name": "Mouth",
+    "file": "icons/library/A2-N-067_입.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-093": {
+    "word": "나누다",
+    "source": "fluent",
+    "name": "Divide",
+    "file": "icons/library/A2-V-093_나누다.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-276": {
+    "word": "샤워",
+    "source": "fluent",
+    "name": "Shower",
+    "file": "icons/library/A2-N-276_샤워.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-360": {
+    "word": "발",
+    "source": "fluent",
+    "name": "Foot",
+    "file": "icons/library/A2-N-360_발.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-209": {
+    "word": "수건",
+    "source": "manual",
+    "name": "Towel (drawn)",
+    "file": "icons/library/A1-N-209_수건.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-211": {
+    "word": "치약",
+    "source": "manual",
+    "name": "Toothpaste tube (drawn)",
+    "file": "icons/library/A1-N-211_치약.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-045": {
+    "word": "들어가다",
+    "source": "manual",
+    "name": "Door + Person walking",
+    "file": "icons/library/A1-V-045_들어가다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-079": {
+    "word": "세수하다",
+    "source": "manual",
+    "name": "Relieved face + Bubbles + Droplet",
+    "file": "icons/library/A1-V-079_세수하다.png",
+    "motion": "fade",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-V-014": {
+    "word": "받다",
+    "source": "manual",
+    "name": "Palms up together + Droplet",
+    "file": "icons/library/A1-V-014_받다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "B1-V-175": {
+    "word": "마르다",
+    "source": "manual",
+    "name": "T-shirt + Sun",
+    "file": "icons/library/B1-V-175_마르다.png",
+    "motion": "fade",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A2-V-085": {
+    "word": "감다",
+    "source": "manual",
+    "name": "Person blonde hair + Bubbles",
+    "file": "icons/library/A2-V-085_감다.png",
+    "motion": "fade",
+    "license": "MIT (Fluent Emoji 기반 자체 제작)"
+  },
+  "A1-N-091": {
+    "word": "얼굴",
+    "source": "fluent",
+    "name": "Slightly smiling face",
+    "file": "icons/library/A1-N-091_얼굴.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-090": {
+    "word": "머리",
+    "source": "fluent",
+    "name": "Person blonde hair",
+    "file": "icons/library/A1-N-090_머리.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-092": {
+    "word": "몸",
+    "source": "fluent",
+    "name": "Person standing",
+    "file": "icons/library/A1-N-092_몸.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-078": {
+    "word": "돌리다",
+    "source": "fluent",
+    "name": "Counterclockwise arrows button",
+    "file": "icons/library/A2-V-078_돌리다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-N-007": {
+    "word": "다음",
+    "source": "fluent",
+    "name": "Next track button",
+    "file": "icons/library/A2-N-007_다음.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-N-165": {
+    "word": "왼쪽",
+    "source": "fluent",
+    "name": "Left arrow",
+    "file": "icons/library/A1-N-165_왼쪽.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-ADV-023": {
+    "word": "제일",
+    "source": "fluent",
+    "name": "1st place medal",
+    "file": "icons/library/A1-ADV-023_제일.png",
+    "motion": "none",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-004": {
+    "word": "나오다",
+    "source": "fluent",
+    "name": "Potable water",
+    "file": "icons/library/A2-V-004_나오다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-ADJ-013": {
+    "word": "따뜻하다",
+    "source": "fluent",
+    "name": "Hot springs",
+    "file": "icons/library/A2-ADJ-013_따뜻하다.png",
+    "motion": "bounce",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-059": {
+    "word": "걸다",
+    "source": "fluent",
+    "name": "Hook",
+    "file": "icons/library/A1-V-059_걸다.png",
+    "motion": "slide",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-160": {
+    "word": "누르다",
+    "source": "fluent",
+    "name": "Backhand index pointing down",
+    "file": "icons/library/A2-V-160_누르다.png",
+    "motion": "pop",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A2-V-012": {
+    "word": "바꾸다",
+    "source": "fluent",
+    "name": "Shuffle tracks button",
+    "file": "icons/library/A2-V-012_바꾸다.png",
+    "motion": "rotate",
+    "license": "MIT (Fluent Emoji)"
+  },
+  "A1-V-023": {
+    "word": "쓰다",
+    "source": "abstract",
+    "name": "",
+    "file": "",
+    "motion": "none",
+    "license": ""
+  },
+  "A2-V-058": {
+    "word": "내다",
+    "source": "abstract",
+    "name": "",
+    "file": "",
+    "motion": "none",
+    "license": ""
+  },
+  "B1-ADV-065": {
+    "word": "골고루",
+    "source": "abstract",
+    "name": "",
+    "file": "",
+    "motion": "none",
+    "license": ""
   }
 }
