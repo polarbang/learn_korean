@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """한글 SBV에서 번역 표를 만들고 13개 언어의 SBV를 생성한다.
 
-S005 이후 회차용. 번역 자체는 사람이 작성한다.
+S006 이후 회차용. 번역 자체는 사람이 작성한다.
 
-  python captions.py prepare S005
-  python captions.py build S005
-  python captions.py build S005 --only en ja
+  python captions.py prepare S006
+  python captions.py build S006
+  python captions.py build S006 --only en ja
 """
 
 import argparse
@@ -43,9 +43,9 @@ class Cue:
 
 def caption_paths(sid: str, root: Path = ROOT) -> tuple[Path, Path, Path]:
     if not SID_RE.fullmatch(sid):
-        raise CaptionError(f"회차 ID 형식이 잘못됐습니다: {sid} (예: S005)")
-    if int(sid[1:]) < 5:
-        raise CaptionError("공통 자막 생성기는 S005부터 사용합니다. S001–S004는 기존 파일을 유지합니다")
+        raise CaptionError(f"회차 ID 형식이 잘못됐습니다: {sid} (예: S006)")
+    if int(sid[1:]) < 6:
+        raise CaptionError("공통 자막 생성기는 S006부터 사용합니다. S001–S005는 기존 파일을 유지합니다")
     folder = root / "sessions" / sid / f"{sid}_captions"
     source = folder / f"{sid}_captions.kr.sbv"
     table = folder / f"{sid}_translations.tsv"

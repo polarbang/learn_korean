@@ -2,24 +2,24 @@
 
 외국인 학습자용 한국어 어휘 학습 세션 제작 프로젝트. 작업 규칙과 절차는 [CLAUDE.md](CLAUDE.md)에 있다.
 
-S005부터는 **촬영할 장면과 꼭 말할 내용 기획 → 자연스럽게 촬영 → 촬영자가 최종 대본 작성 → 전체 난이도 검토 → 필요한 에셋 후보 선정** 순서로 진행한다. S001–S004는 그대로 둔다. 자막·학습 자료는 필요할 때 완성 대본을 기준으로 만든다. [촬영 기획 양식](sessions/_template.md), [대본 수준 검토 양식](sessions/_script_review_template.md), [에셋 후보판 양식](sessions/_asset_candidates_template.md)을 사용한다.
+S006부터는 **촬영할 장면과 꼭 말할 내용 기획 → 자연스럽게 촬영 → 촬영자가 최종 대본 작성 → 전체 난이도 검토 → 필요한 에셋 후보 선정** 순서로 진행한다. S001–S005는 그대로 둔다. 자막·학습 자료는 필요할 때 완성 대본을 기준으로 만든다. [촬영 기획 양식](sessions/_template.md), [대본 수준 검토 양식](sessions/_script_review_template.md), [에셋 후보판 양식](sessions/_asset_candidates_template.md)을 사용한다.
 
-## S005 이후 자막 만들기
+## S006 이후 자막 만들기
 
-사용자가 준 한국어 자막을 `sessions/S005/S005_captions/S005_captions.kr.sbv`에 저장한 뒤 실행한다.
-
-```
-python captions.py prepare S005
-```
-
-생성된 `sessions/S005/S005_captions/S005_translations.tsv`에서 각 한국어 문장의 13개 언어 번역을 채우고 아래 명령을 실행한다. 같은 한국어 문장은 한 번만 번역한다.
+사용자가 준 한국어 자막을 `sessions/S006/S006_captions/S006_captions.kr.sbv`에 저장한 뒤 실행한다.
 
 ```
-python captions.py build S005
-python upload_captions.py S005 --dry-run
+python captions.py prepare S006
 ```
 
-한국어 원본이 바뀌면 `python captions.py prepare S005 --refresh`를 실행한다. 기존 번역표는 백업되고, 바뀌지 않은 문장의 번역은 유지된다. 특정 언어만 다시 만들 때는 `python captions.py build S005 --only en ja`를 사용한다. 업로드는 영상 URL을 받은 뒤 `python upload_captions.py S005 --video <영상 URL>`로 진행한다.
+생성된 `sessions/S006/S006_captions/S006_translations.tsv`에서 각 한국어 문장의 13개 언어 번역을 채우고 아래 명령을 실행한다. 같은 한국어 문장은 한 번만 번역한다.
+
+```
+python captions.py build S006
+python upload_captions.py S006 --dry-run
+```
+
+한국어 원본이 바뀌면 `python captions.py prepare S006 --refresh`를 실행한다. 기존 번역표는 백업되고, 바뀌지 않은 문장의 번역은 유지된다. 특정 언어만 다시 만들 때는 `python captions.py build S006 --only en ja`를 사용한다. 업로드는 영상 URL을 받은 뒤 `python upload_captions.py S006 --video <영상 URL>`로 진행한다.
 
 ## 새 기기 설정
 ```
