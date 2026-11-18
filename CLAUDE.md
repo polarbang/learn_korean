@@ -23,6 +23,7 @@
 - vocab.json · vocab.py — 기존 어휘 상태 기록과 조회 도구. 단어 목록은 불완전하므로 최종 대본 난이도 판정의 기준표로 사용하지 않는다.
 - captions.py — S006부터 쓰는 공통 자막 번역표·SBV 생성기.
 - upload_captions.py — 완성된 회차 자막을 유튜브에 업로드한다.
+- upload_titles.py · video_titles.tsv — 영상 제목 번역표와 업로드 도구 (영상당 한 줄).
 
 여러 회차에서 다시 쓸 수 있는 원본은 common_assets/·icons/에, 특정 회차에서 고른 에셋과 자료는 sessions/S###/에 둔다.
 
@@ -136,6 +137,15 @@ python upload_captions.py S004 --video https://youtu.be/XXXXXXXXXXX
 - 할당량: 하루 10,000 기본, 14개 언어 한 번에 약 5,700 → 하루 영상 1편. 할당량이 다 되면 다음 날 `--only`로 남은 언어만 올린다.
 - 인증: 루트의 `client_secret.json`(git 제외)과 `.cache/youtube_token.json`. OAuth 앱이 테스트 상태라 7일마다 브라우저 로그인이 다시 필요하다 — 로그인 창이 뜨면 사용자에게 알린다.
 - 유튜브 언어 코드: 파일 이름의 `kr`은 업로드 때 `ko`로 바꾼다 (나머지는 파일 이름 코드 그대로).
+
+### 영상 제목 번역 업로드 (`upload_titles.py`)
+자막 번역본을 올릴 때 제목 번역도 함께 올린다. 사용자가 영상의 **영어 제목**을 주면 나머지 언어 제목을 번역해 같이 업로드한다.
+- 대상: 자막 번역 언어 중 영어를 뺀 **12개** (`zh-Hans` `id` `pt-BR` `fil` `ru` `vi` `es` `fr` `de` `ar` `ja` `ms`). 영어는 기본 제목(defaultLanguage `en`)이고, **한국어 제목은 넣지 않는다**.
+- 루트의 `video_titles.tsv`(탭 구분, 열: `video en zh-Hans id pt-BR fil ru vi es fr de ar ja ms`)에 영상 URL과 영어 제목·번역 제목을 한 줄로 추가한다. 기존 줄은 그대로 둔다.
+- 번역: `|` 구분선은 모든 언어에 그대로 유지한다. `-`로 이어 붙인 부분은 그 언어에서 자연스러우면 `-` 없이 문장으로 잇고(예: es `… en coreano lavando la ropa`, ja `… 理解できる韓国語インプット 洗濯編`), 어색하면 콜론(`:`)을 쓴다. 제목 속 한국어(예: `(위, 아래, 앞, 뒤 +)`)는 그대로 둔다. 언어별 기존 제목의 표현(예: "Slow Korean for Beginners" → es `Coreano lento para principiantes`)을 `video_titles.tsv`에서 확인해 통일한다.
+- 언어별 100자 제한, `< >` 사용 불가. 새 영상만 올린다: `python upload_titles.py --video <URL> --dry-run`으로 검사한 뒤 `--dry-run` 없이 실행. 영상 1편 약 51 units라 자막(약 5,700)과 같은 날 올려도 충분하다. `--video` 없이 실행하면 표 전체(편수 × 50)를 다시 올린다.
+- 영어 제목·설명글·태그·기존 설명글 번역은 바꾸지 않는다. 표의 en 제목이 유튜브 제목과 다르면 경고만 나온다 — 영어 제목 자체를 바꾸려면 유튜브에서 직접 고친다.
+- 원어민 검수 전 번역이라는 점을 사용자에게 알린다.
 
 ## 유튜브 설명글 규칙
 사용자가 영상 설명글을 요청하면 아래 형식으로 짧게 쓴다 (영어). 결과물은 `sessions/S###/S###_description.txt`.
